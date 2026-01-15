@@ -9,7 +9,10 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">DLS <span>INVIGO</span></a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DLS INVIGO Logo" class="logo-img" style="display:none;">
+                <span>DLS <span style="color: var(--primary-orange);">INVIGO</span></span>
+            </a>
             
             <nav>
                 <div class="nav-main">
@@ -18,7 +21,11 @@
                     <a href="dls-invigo.html">DLS INVIGO</a>
                     <a href="sponsors.html">Sponsors</a>
                 </div>
-                <button class="menu-toggle">Menu</button>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <button class="mobile-menu-toggle">&#9776;</button>
             </nav>
         </div>
@@ -46,8 +53,24 @@
 
     <section class="content-section">
         <div class="container">
-            <h2>Nieuws & Updates</h2>
-            <p>Blijf op de hoogte van alle activiteiten, resultaten en nieuwtjes van DLS INVIGO. Hier vind je de laatste updates van onze club.</p>
+            <h2>DLS Invigo Ploegvoorstelling</h2>
+            
+            <div style="margin: 40px 0;">
+                <video controls style="width: 100%; max-width: 100%; height: auto; display: block;">
+                    <source src="images/feeds_images/ploegvoorstellingvideo.mp4" type="video/mp4">
+                    Je browser ondersteunt geen video.
+                </video>
+            </div>
+
+            <div class="card" style="margin: 40px 0; padding: 30px; background: rgba(240, 132, 31, 0.1); border-color: var(--primary-orange);">
+                <h3 style="color: var(--primary-orange); margin-bottom: 20px;">Ploegvoorstelling 18 januari 2025</h3>
+                <p style="font-size: 18px; line-height: 1.8;">
+                    Ploegvoorstelling 18 januari 2025 bij sponsor GAMIFIED te Kontich
+                </p>
+            </div>
+
+            <h2 style="margin-top: 60px;">Nieuws & Updates</h2>
+            <p>Blijf op de hoogte van alle activiteiten, resultaten en nieuwtjes van DLS INVIGO.</p>
 
             <div class="grid-2" style="margin-top: 40px;">
                 <div class="card">
@@ -55,8 +78,8 @@
                         <span class="image-placeholder">Foto</span>
                     </div>
                     <h3>Recente Clubrit</h3>
-                    <p style="color: var(--primary-orange); margin-bottom: 10px;">15 januari 2026</p>
-                    <p>Een prachtige clubrit met een grote groep enthousiaste renners. Het weer was perfect en de sfeer geweldig!</p>
+                    <p style="color: var(--primary-orange); margin-bottom: 10px;">Datum te bepalen</p>
+                    <p>Een prachtige clubrit met een grote groep enthousiaste renners.</p>
                 </div>
 
                 <div class="card">
@@ -64,31 +87,9 @@
                         <span class="image-placeholder">Foto</span>
                     </div>
                     <h3>Wedstrijd Update</h3>
-                    <p style="color: var(--primary-orange); margin-bottom: 10px;">12 januari 2026</p>
-                    <p>Onze clubleden hebben uitstekend gepresteerd tijdens de laatste wedstrijd. Bekijk hier de resultaten.</p>
+                    <p style="color: var(--primary-orange); margin-bottom: 10px;">Datum te bepalen</p>
+                    <p>Onze clubleden hebben uitstekend gepresteerd tijdens de laatste wedstrijd.</p>
                 </div>
-
-                <div class="card">
-                    <div class="image-box">
-                        <span class="image-placeholder">Foto</span>
-                    </div>
-                    <h3>Trainingsschema 2026</h3>
-                    <p style="color: var(--primary-orange); margin-bottom: 10px;">8 januari 2026</p>
-                    <p>Het nieuwe trainingsschema voor 2026 is bekend. Check de data en tijden voor de groepstrainingen.</p>
-                </div>
-
-                <div class="card">
-                    <div class="image-box">
-                        <span class="image-placeholder">Foto</span>
-                    </div>
-                    <h3>Nieuwe Sponsors</h3>
-                    <p style="color: var(--primary-orange); margin-bottom: 10px;">5 januari 2026</p>
-                    <p>We zijn trots om onze nieuwe sponsors te verwelkomen die ons dit seizoen zullen ondersteunen.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 50px;">
-                <p style="color: var(--text-gray);">Meer nieuws volgt binnenkort. Blijf onze website in de gaten houden!</p>
             </div>
         </div>
     </section>
@@ -132,7 +133,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 DLS INVIGO Wielerclub. Alle rechten voorbehouden.</p>
+                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
             </div>
         </div>
     </footer>
