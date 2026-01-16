@@ -15,20 +15,40 @@
         .riders-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+            gap: 40px;
+            align-items: start;
         }
 
         .bike-container,
         .kit-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(240, 132, 31, 0.2);
+            padding: 30px;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .bike-container:hover,
+        .kit-container:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-5px);
+        }
+
+        .bike-container h3,
+        .kit-container h3 {
+            font-size: 24px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            color: var(--primary-orange);
         }
 
         .bike-container img,
         .kit-container img {
             max-width: 100%;
             height: auto;
-            max-height: 500px;
+            max-height: 450px;
             object-fit: contain;
         }
 
@@ -52,17 +72,18 @@
 
         .news-section {
             padding: 60px 0;
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .news-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 30px;
             margin-top: 40px;
         }
 
         .news-item {
-            background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
             border: 1px solid rgba(240, 132, 31, 0.2);
             padding: 0;
             transition: all 0.3s ease;
@@ -72,6 +93,7 @@
         .news-item:hover {
             border-color: var(--primary-orange);
             transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(240, 132, 31, 0.2);
         }
 
         .news-image {
@@ -82,6 +104,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            border-bottom: 2px solid rgba(240, 132, 31, 0.3);
         }
 
         .news-image img {
@@ -127,7 +150,7 @@
     <header>
         <div class="header-content">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="DLS INVIGO Logo" class="logo-img" style="display:none;">
+                <img src="images/2025_logo_dls.png" alt="DLS INVIGO Logo" class="logo-img">
                 <span>DLS <span style="color: var(--primary-orange);">INVIGO</span></span>
             </a>
             
@@ -174,10 +197,12 @@
             
             <div class="riders-grid">
                 <div class="bike-container">
+                    <h3>Onze Fiets</h3>
                     <img src="images/index_images/bike.jpg" alt="DLS INVIGO Fiets">
                 </div>
 
                 <div class="kit-container">
+                    <h3>Ons Tenue</h3>
                     <div class="kit-slideshow">
                         <div class="kit-slide active">
                             <img src="images/index_images/kit_trui_voorkant.png" alt="DLS INVIGO Trui Voorkant">
@@ -206,7 +231,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" style="background: rgba(255, 255, 255, 0.02);">
         <div class="container">
             <div class="section-header">
                 <h2>Over <span>DLS INVIGO</span></h2>
