@@ -5,6 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DLS INVIGO - Wielerclub</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .new-riders-section {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .riders-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .bike-container,
+        .kit-container {
+            text-align: center;
+        }
+
+        .bike-container img,
+        .kit-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .kit-slideshow {
+            position: relative;
+        }
+
+        .kit-slide {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .kit-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .news-section {
+            padding: 60px 0;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .news-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(240, 132, 31, 0.2);
+            padding: 0;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .news-item:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-date {
+            color: var(--primary-orange);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .news-item h3 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+
+        .news-item p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .riders-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -51,6 +168,38 @@
         <img src="images/index_images/Frontpage.jpeg" alt="DLS INVIGO" class="hero-image">
     </section>
 
+    <section class="new-riders-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Voor Nieuwe Rijders</h2>
+            
+            <div class="riders-grid">
+                <div class="bike-container">
+                    <img src="images/index_images/bike.jpg" alt="DLS INVIGO Fiets">
+                </div>
+
+                <div class="kit-container">
+                    <div class="kit-slideshow">
+                        <div class="kit-slide active">
+                            <img src="images/index_images/kit1.jpg" alt="DLS INVIGO Tenue 1">
+                        </div>
+                        <div class="kit-slide">
+                            <img src="images/index_images/kit2.jpg" alt="DLS INVIGO Tenue 2">
+                        </div>
+                        <div class="kit-slide">
+                            <img src="images/index_images/kit3.jpg" alt="DLS INVIGO Tenue 3">
+                        </div>
+                        <div class="kit-slide">
+                            <img src="images/index_images/kit4.jpg" alt="DLS INVIGO Tenue 4">
+                        </div>
+                        <div class="kit-slide">
+                            <img src="images/index_images/kit5.jpg" alt="DLS INVIGO Tenue 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section">
         <div class="container">
             <div class="section-header">
@@ -77,28 +226,43 @@
         </div>
     </section>
 
-    <section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <section class="news-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Recente <span>Activiteiten</span></h2>
-                <p>Blijf op de hoogte van onze laatste nieuwtjes en prestaties</p>
-            </div>
+            <h2 style="text-align: center; margin-bottom: 20px;">Laatste Nieuws</h2>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;">Blijf op de hoogte van onze laatste activiteiten en prestaties</p>
 
-            <div class="grid-2">
-                <div class="card">
-                    <div class="image-box">
-                        <span class="image-placeholder">Foto komt hier</span>
+            <div class="news-grid">
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/index_images/news1.jpg" alt="Nieuws 1">
                     </div>
-                    <h3>Laatste Rit</h3>
-                    <p>Onze laatste clubrit was een groot succes met een mooie groep renners die genoten van het perfecte wielerweer.</p>
+                    <div class="news-content">
+                        <p class="news-date">Datum te bepalen</p>
+                        <h3>Nieuwsartikel Titel 1</h3>
+                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <div class="image-box">
-                        <span class="image-placeholder">Foto komt hier</span>
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/index_images/news2.jpg" alt="Nieuws 2">
                     </div>
-                    <h3>Wedstrijd Resultaten</h3>
-                    <p>Bekijk de prestaties van onze clubleden tijdens de laatste wedstrijden en kampioenschappen.</p>
+                    <div class="news-content">
+                        <p class="news-date">Datum te bepalen</p>
+                        <h3>Nieuwsartikel Titel 2</h3>
+                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-image">
+                        <img src="images/index_images/news3.jpg" alt="Nieuws 3">
+                    </div>
+                    <div class="news-content">
+                        <p class="news-date">Datum te bepalen</p>
+                        <h3>Nieuwsartikel Titel 3</h3>
+                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -161,11 +325,25 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 DLS INVIGO Wielerclub. Alle rechten voorbehouden.copy; Alle rechten voorbehouden DLS INVIGO</p>
+                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Kit slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.kit-slide');
+        
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Change slide every 3 seconds
+        setInterval(showNextSlide, 3000);
+    </script>
 </body>
 </html>
