@@ -122,6 +122,7 @@
         .modal-content {
             max-width: 90%;
             max-height: 90%;
+            position: relative;
         }
 
         .modal-content img {
@@ -137,10 +138,43 @@
             font-size: 40px;
             font-weight: 300;
             cursor: pointer;
+            z-index: 2001;
         }
 
         .close-modal:hover {
             color: var(--primary-orange);
+        }
+
+        .modal-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(240, 132, 31, 0.8);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            font-size: 35px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+        }
+
+        .modal-arrow:hover {
+            background: var(--primary-orange);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-arrow-prev {
+            left: 40px;
+        }
+
+        .modal-arrow-next {
+            right: 40px;
         }
 
         @keyframes fadeIn {
@@ -397,8 +431,10 @@
         </div>
     </section>
 
-    <div id="kitModal" class="modal" onclick="closeKitModal()">
-        <span class="close-modal">&times;</span>
+    <div id="kitModal" class="modal" onclick="event.target === this && closeKitModal()">
+        <span class="close-modal" onclick="closeKitModal()">&times;</span>
+        <button class="modal-arrow modal-arrow-prev" onclick="changeModalSlide(-1); event.stopPropagation();">&#8249;</button>
+        <button class="modal-arrow modal-arrow-next" onclick="changeModalSlide(1); event.stopPropagation();">&#8250;</button>
         <div class="modal-content">
             <img id="kitModalImage" src="" alt="Kit">
         </div>
@@ -450,8 +486,20 @@
 
     <script src="js/script.js"></script>
     <script>
+        // Kit images array
+        const kitImages = [
+            'images/index_images/kit_trui_voorkant.png',
+            'images/index_images/kit_trui_linkerkant.png',
+            'images/index_images/kit_trui_rechterkant.png',
+            'images/index_images/kit_broek_voorkant.png',
+            'images/index_images/kit_broek_achterkant.png',
+            'images/index_images/kit_broek_linkerkant.png',
+            'images/index_images/kit_broek_rechterkant.png'
+        ];
+
         // Kit slideshow
         let currentSlide = 0;
+        let currentModalSlide = 0;
         const slides = document.querySelectorAll('.kit-slide');
         let autoplayInterval;
         
@@ -479,9 +527,18 @@
 
         // Kit modal functions
         function openKitModal(imageSrc) {
+            // Find the index of the current image
+            currentModalSlide = kitImages.indexOf(imageSrc);
+            if (currentModalSlide === -1) currentModalSlide = 0;
+            
             document.getElementById('kitModalImage').src = imageSrc;
             document.getElementById('kitModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        function changeModalSlide(direction) {
+            currentModalSlide = (currentModalSlide + direction + kitImages.length) % kitImages.length;
+            document.getElementById('kitModalImage').src = kitImages[currentModalSlide];
         }
 
         function closeKitModal() {
@@ -493,6 +550,12 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeKitModal();
+            } else if (document.getElementById('kitModal').classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    changeModalSlide(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeModalSlide(1);
+                }
             }
         });
 
