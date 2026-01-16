@@ -5,11 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - DLS INVIGO</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-form {
+            max-width: 700px;
+            margin: 40px auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 300;
+            font-size: 16px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(240, 132, 31, 0.3);
+            color: var(--text-white);
+            font-size: 16px;
+            font-weight: 300;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-orange);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            background: var(--primary-orange);
+            color: var(--text-white);
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #d97419;
+            transform: translateY(-2px);
+        }
+
+        .captcha-container {
+            margin: 25px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(240, 132, 31, 0.2);
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">DLS <span>INVIGO</span></a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DLS INVIGO Logo" class="logo-img" style="display:none;">
+                <span>DLS <span style="color: var(--primary-orange);">INVIGO</span></span>
+            </a>
             
             <nav>
                 <div class="nav-main">
@@ -18,7 +101,11 @@
                     <a href="dls-invigo.html">DLS INVIGO</a>
                     <a href="sponsors.html">Sponsors</a>
                 </div>
-                <button class="menu-toggle">Menu</button>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <button class="mobile-menu-toggle">&#9776;</button>
             </nav>
         </div>
@@ -40,71 +127,55 @@
         </div>
     </div>
 
-    <section class="page-hero">
-        <h1><span>Contact</span></h1>
-    </section>
-
-    <section class="content-section">
+    <section class="content-section" style="padding-top: 100px;">
         <div class="container">
-            <h2>Neem Contact Op</h2>
-            <p>Heb je vragen over DLS INVIGO? Wil je lid worden of meer informatie? Neem gerust contact met ons op!</p>
+            <h2>Contact</h2>
+            <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                Contacteer ons vandaag voor meer informatie.
+            </p>
+            
+            <p style="margin-bottom: 40px;">
+                Heb je vragen over onze club, het lidmaatschap, waar we voor staan, wat we wel of niet aanbieden, hoe je kan sponsoren, waar je ons kan vinden... aarzel niet en stuur ons een mailtje en wij trachten u zo snel mogelijk een passend antwoord te verzenden.
+            </p>
 
-            <div class="grid-2" style="margin-top: 40px;">
-                <div>
-                    <h3>Algemene Informatie</h3>
-                    <div class="card" style="margin-top: 20px;">
-                        <h3 style="color: var(--primary-orange); font-size: 18px;">E-mail</h3>
-                        <p>info@dlsinvigo.be</p>
-                    </div>
-                    
-                    <div class="card" style="margin-top: 20px;">
-                        <h3 style="color: var(--primary-orange); font-size: 18px;">Telefoon</h3>
-                        <p>+32 XXX XX XX XX</p>
-                    </div>
-
-                    <div class="card" style="margin-top: 20px;">
-                        <h3 style="color: var(--primary-orange); font-size: 18px;">Adres</h3>
-                        <p>Straatnaam XX<br>XXXX Plaats<br>België</p>
-                    </div>
-                </div>
-
-                <div>
-                    <h3>Bestuur</h3>
-                    <div class="card" style="margin-top: 20px;">
-                        <h3 style="color: var(--primary-orange); font-size: 18px;">Voorzitter</h3>
-                        <p>Naam: [Naam Voorzitter]<br>E-mail: voorzitter@dlsinvigo.be</p>
-                    </div>
-
-                    <div class="card" style="margin-top: 20px;">
-                        <h3 style="color: var(--primary-orange); font-size: 18px;">Secretaris</h3>
-                        <p>Naam: [Naam Secretaris]<br>E-mail: secretaris@dlsinvigo.be</p>
-                    </div>
-
-                    <div class="card" style="margin-top: 20px;">
-                        <h3 style="color: var(--primary-orange); font-size: 18px;">Penningmeester</h3>
-                        <p>Naam: [Naam Penningmeester]<br>E-mail: penningmeester@dlsinvigo.be</p>
-                    </div>
-                </div>
+            <div class="card" style="margin: 30px 0; padding: 30px; background: rgba(240, 132, 31, 0.1); border-color: var(--primary-orange);">
+                <p><strong>E-mail:</strong> secretariaat@dlsinvigo.be</p>
+                <p><strong>Adres:</strong> DLS INVIGO, Zemstbaan 101, 2800 Mechelen, Belgium</p>
             </div>
 
-            <h3 style="margin-top: 50px;">Sociale Media</h3>
-            <p>Volg ons op sociale media voor de laatste updates en nieuws:</p>
-            <div style="margin-top: 20px;">
-                <div class="card" style="display: inline-block; margin-right: 20px; padding: 20px 40px;">
-                    <h3>Facebook</h3>
-                    <p>DLS INVIGO Wielerclub</p>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Naam *</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div class="card" style="display: inline-block; margin-right: 20px; padding: 20px 40px;">
-                    <h3>Instagram</h3>
-                    <p>@dlsinvigo</p>
-                </div>
-            </div>
 
-            <h3 style="margin-top: 50px;">Locatie</h3>
-            <div class="card" style="margin-top: 20px; padding: 40px; text-align: center;">
-                <p style="color: var(--primary-orange); font-size: 16px; text-transform: uppercase; letter-spacing: 1px;">Kaart komt hier</p>
-                <p style="margin-top: 20px; color: var(--text-gray);">De locatie van onze clubactiviteiten en verzamelpunten</p>
-            </div>
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Onderwerp *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Bericht *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter" style="margin-bottom: 0;">Ja, ik ontvang graag nieuws over aanbiedingen.</label>
+                </div>
+
+                <div class="captcha-container">
+                    <p style="margin-bottom: 10px;">Anti-robotverificatie</p>
+                    <p style="color: var(--primary-orange); font-size: 14px;">Klik om te starten - Friendly Captcha</p>
+                </div>
+
+                <button type="submit" class="submit-button">Verzenden</button>
+            </form>
         </div>
     </section>
 
@@ -147,7 +218,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 DLS INVIGO Wielerclub. Alle rechten voorbehouden.</p>
+                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
             </div>
         </div>
     </footer>
