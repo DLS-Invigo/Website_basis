@@ -491,7 +491,13 @@ footer {
     }
     
     .hero {
-        height: 500px;
+        margin-top: 70px;
+        height: auto;
+    }
+    
+    .hero-image {
+        height: auto;
+        max-height: none;
     }
     
     .hero h1 {
@@ -500,6 +506,14 @@ footer {
     
     .hero p {
         font-size: 16px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
     }
     
     .section-header h2 {
