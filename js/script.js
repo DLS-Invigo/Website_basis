@@ -33,18 +33,22 @@ if (closeMenu) {
 }
 
 // Close menu when clicking outside
-dropdownMenu.addEventListener('click', function(e) {
-    if (e.target === dropdownMenu) {
-        closeMenuFunc();
-    }
-});
+if (dropdownMenu) {
+    dropdownMenu.addEventListener('click', function(e) {
+        if (e.target === dropdownMenu) {
+            closeMenuFunc();
+        }
+    });
+}
 
 // Close menu on escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && dropdownMenu.classList.contains('active')) {
-        closeMenuFunc();
-    }
-});
+if (dropdownMenu) {
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && dropdownMenu.classList.contains('active')) {
+            closeMenuFunc();
+        }
+    });
+}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
