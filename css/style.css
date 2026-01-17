@@ -136,7 +136,7 @@ border: none;
 color: var(–text-white);
 padding: 10px;
 cursor: pointer;
-display: flex;
+display: none;
 flex-direction: column;
 gap: 4px;
 width: 30px;
@@ -243,9 +243,18 @@ padding-left: 30px;
 display: none;
 background: none;
 border: none;
-color: var(–text-white);
+color: var(–primary-orange);
 font-size: 28px;
 cursor: pointer;
+transition: color var(–transition-speed) ease;
+}
+
+.mobile-menu-toggle:hover {
+color: var(–text-white);
+}
+
+.mobile-menu-toggle:hover {
+color: var(–primary-orange);
 }
 
 /* Hero Section */
