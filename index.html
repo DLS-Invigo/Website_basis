@@ -9,7 +9,30 @@
         .new-riders-section {
             background: rgba(255, 255, 255, 0.02);
             padding: 60px 0;
-            margin-top: 40px;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .new-riders-section {
+                padding: 30px 0;
+                margin-top: 0;
+            }
+
+            .riders-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .bike-container h3,
+            .kit-container h3 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .bike-container,
+            .kit-container {
+                padding: 20px;
+            }
         }
 
         .riders-grid {
@@ -185,6 +208,21 @@
         .news-section {
             padding: 60px 0;
             background: rgba(255, 255, 255, 0.02);
+        }
+
+        @media (max-width: 768px) {
+            .news-section {
+                padding: 30px 0;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .news-item h3 {
+                font-size: 18px;
+            }
         }
 
         .news-grid {
