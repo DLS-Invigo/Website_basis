@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -12,338 +13,341 @@
             margin-top: 0;
         }
 
-        @media (max-width: 768px) {
-            .new-riders-section {
-                padding: 30px 0;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-
-            .riders-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .bike-container h3,
-            .kit-container h3 {
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-
-            .bike-container,
-            .kit-container {
-                padding: 20px;
-            }
-            
-            .hero {
-                margin-bottom: 0 !important;
-            }
-            
-            .hero-image {
-                margin-bottom: 0 !important;
-            }
-            
-            .section {
-                padding: 30px 0;
-                margin-top: 0;
-            }
-            
-            .news-highlight {
-                padding: 20px 0 !important;
-            }
-            
-            .facebook-posts-grid {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
-            }
-            
-            .facebook-post-container {
-                height: auto !important;
-                padding: 15px !important;
-            }
-            
-            .facebook-post-item iframe {
-                width: 100% !important;
-                max-width: 100% !important;
-            }
+```
+    @media (max-width: 768px) {
+        .new-riders-section {
+            padding: 30px 0;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         .riders-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-
-        .bike-container,
-        .kit-container {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
-            border: 3px solid rgba(240, 132, 31, 0.5);
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .bike-container:hover,
-        .kit-container:hover {
-            border-color: var(--primary-orange);
-            border-width: 4px;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(240, 132, 31, 0.3);
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
 
         .bike-container h3,
         .kit-container h3 {
-            font-size: 24px;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-            color: var(--primary-orange);
+            font-size: 20px;
+            margin-bottom: 20px;
         }
 
-        .bike-container img,
-        .kit-container img {
-            max-width: 100%;
-            height: auto;
-            max-height: 450px;
-            object-fit: contain;
+        .bike-container,
+        .kit-container {
+            padding: 20px;
         }
-
-        .kit-slideshow {
-            position: relative;
+        
+        .hero {
+            margin-bottom: 0 !important;
         }
-
-        .kit-slide {
-            display: none;
-            animation: fadeIn 0.5s;
-            cursor: pointer;
+        
+        .hero-image {
+            margin-bottom: 0 !important;
         }
-
-        .kit-slide.active {
-            display: block;
+        
+        .section {
+            padding: 30px 0;
+            margin-top: 0;
         }
-
-        .kit-slide img:hover {
-            opacity: 0.9;
+        
+        .news-highlight {
+            padding: 20px 0 !important;
         }
-
-        .slideshow-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(240, 132, 31, 0.8);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            font-size: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 300;
+        
+        .facebook-posts-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
         }
-
-        .slideshow-arrow:hover {
-            background: var(--primary-orange);
-            transform: translateY(-50%) scale(1.1);
+        
+        .facebook-post-container {
+            height: auto !important;
+            padding: 15px !important;
         }
-
-        .arrow-prev {
-            left: 10px;
+        
+        .facebook-post-item iframe {
+            width: 100% !important;
+            max-width: 100% !important;
         }
+    }
 
-        .arrow-next {
-            right: 10px;
-        }
+    .riders-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            align-items: center;
-            justify-content: center;
-        }
+    .bike-container,
+    .kit-container {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+        border: 3px solid rgba(240, 132, 31, 0.5);
+        padding: 30px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
 
-        .modal.active {
-            display: flex;
-        }
+    .bike-container:hover,
+    .kit-container:hover {
+        border-color: var(--primary-orange);
+        border-width: 4px;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(240, 132, 31, 0.3);
+    }
 
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-            position: relative;
-        }
+    .bike-container h3,
+    .kit-container h3 {
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        color: var(--primary-orange);
+    }
 
-        .modal-content img {
-            width: 100%;
-            height: auto;
-        }
+    .bike-container img,
+    .kit-container img {
+        max-width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+    }
 
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            color: white;
-            font-size: 40px;
-            font-weight: 300;
-            cursor: pointer;
-            z-index: 2001;
-        }
+    .kit-slideshow {
+        position: relative;
+    }
 
-        .close-modal:hover {
-            color: var(--primary-orange);
-        }
+    .kit-slide {
+        display: none;
+        animation: fadeIn 0.5s;
+        cursor: pointer;
+    }
 
-        .modal-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(240, 132, 31, 0.8);
-            color: white;
-            border: none;
-            width: 60px;
-            height: 60px;
-            font-size: 35px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 2001;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 300;
-        }
+    .kit-slide.active {
+        display: block;
+    }
 
-        .modal-arrow:hover {
-            background: var(--primary-orange);
-            transform: translateY(-50%) scale(1.1);
-        }
+    .kit-slide img:hover {
+        opacity: 0.9;
+    }
 
-        .modal-arrow-prev {
-            left: 40px;
-        }
+    .slideshow-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(240, 132, 31, 0.8);
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+    }
 
-        .modal-arrow-next {
-            right: 40px;
-        }
+    .slideshow-arrow:hover {
+        background: var(--primary-orange);
+        transform: translateY(-50%) scale(1.1);
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    .arrow-prev {
+        left: 10px;
+    }
 
+    .arrow-next {
+        right: 10px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        position: relative;
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+        cursor: pointer;
+        z-index: 2001;
+    }
+
+    .close-modal:hover {
+        color: var(--primary-orange);
+    }
+
+    .modal-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(240, 132, 31, 0.8);
+        color: white;
+        border: none;
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 2001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+    }
+
+    .modal-arrow:hover {
+        background: var(--primary-orange);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .modal-arrow-prev {
+        left: 40px;
+    }
+
+    .modal-arrow-next {
+        right: 40px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .news-section {
+        padding: 60px 0;
+        background: rgba(255, 255, 255, 0.02);
+    }
+
+    .facebook-post-container:hover {
+        border-color: var(--primary-orange);
+        border-width: 4px;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(240, 132, 31, 0.3);
+    }
+
+    @media (max-width: 768px) {
         .news-section {
-            padding: 60px 0;
-            background: rgba(255, 255, 255, 0.02);
-        }
-
-        .facebook-post-container:hover {
-            border-color: var(--primary-orange);
-            border-width: 4px;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(240, 132, 31, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            .news-section {
-                padding: 30px 0;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .news-item h3 {
-                font-size: 18px;
-            }
-            
-            .facebook-post-container {
-                height: auto !important;
-            }
+            padding: 30px 0;
         }
 
         .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .news-item {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
-            border: 3px solid rgba(240, 132, 31, 0.5);
-            padding: 0;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .news-item:hover {
-            border-color: var(--primary-orange);
-            border-width: 4px;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(240, 132, 31, 0.3);
-        }
-
-        .news-image {
-            width: 100%;
-            height: 250px;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-bottom: 3px solid rgba(240, 132, 31, 0.6);
-        }
-
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .news-content {
-            padding: 25px;
-        }
-
-        .news-date {
-            color: var(--primary-orange);
-            font-size: 14px;
-            margin-bottom: 10px;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
 
         .news-item h3 {
-            font-size: 20px;
-            font-weight: 300;
-            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .facebook-post-container {
+            height: auto !important;
+        }
+    }
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .news-item {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+        border: 3px solid rgba(240, 132, 31, 0.5);
+        padding: 0;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .news-item:hover {
+        border-color: var(--primary-orange);
+        border-width: 4px;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(240, 132, 31, 0.3);
+    }
+
+    .news-image {
+        width: 100%;
+        height: 250px;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-bottom: 3px solid rgba(240, 132, 31, 0.6);
+    }
+
+    .news-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .news-content {
+        padding: 25px;
+    }
+
+    .news-date {
+        color: var(--primary-orange);
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .news-item h3 {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+
+    .news-item p {
+        color: var(--text-gray);
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .riders-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
 
-        .news-item p {
-            color: var(--text-gray);
-            line-height: 1.6;
+        .news-grid {
+            grid-template-columns: 1fr;
         }
+    }
+</style>
+```
 
-        @media (max-width: 768px) {
-            .riders-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -351,314 +355,317 @@
             <a href="index.html" class="logo">
                 <img src="images/2025_logo_dls.png" alt="DLS INVIGO Logo" class="logo-img">
             </a>
-            
-            <nav>
-                <div class="nav-main">
-                    <a href="index.html">Home</a>
-                    <a href="lidmaatschap.html">Lidmaatschap</a>
-                    <a href="dls-invigo.html">DLS INVIGO</a>
-                    <a href="sponsors.html">Sponsors</a>
-                </div>
-                <button class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <button class="mobile-menu-toggle">&#9776;</button>
-            </nav>
-        </div>
-    </header>
 
-    <div class="dropdown-menu">
-        <div class="dropdown-header">
-            <h3>Menu</h3>
-            <button class="close-menu">&times;</button>
-        </div>
-        <div class="dropdown-links">
-            <a href="feeds.html">Feeds</a>
-            <a href="respect.html">R.E.S.P.E.C.T.</a>
-            <a href="gdpr.html">GDPR</a>
-            <a href="gedragscode.html">Gedragscode</a>
-            <a href="archief.html">Archief</a>
-            <a href="contact.html">Contact</a>
-            <a href="wedstrijdinrichting.html">Wedstrijdinrichting</a>
+```
+        <nav>
+            <div class="nav-main">
+                <a href="index.html">Home</a>
+                <a href="lidmaatschap.html">Lidmaatschap</a>
+                <a href="dls-invigo.html">DLS INVIGO</a>
+                <a href="sponsors.html">Sponsors</a>
+            </div>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="mobile-menu-toggle">&#9776;</button>
+        </nav>
+    </div>
+</header>
+
+<div class="dropdown-menu">
+    <div class="dropdown-header">
+        <h3>Menu</h3>
+        <button class="close-menu">&times;</button>
+    </div>
+    <div class="dropdown-links">
+        <a href="feeds.html">Feeds</a>
+        <a href="respect.html">R.E.S.P.E.C.T.</a>
+        <a href="gdpr.html">GDPR</a>
+        <a href="gedragscode.html">Gedragscode</a>
+        <a href="archief.html">Archief</a>
+        <a href="contact.html">Contact</a>
+        <a href="wedstrijdinrichting.html">Wedstrijdinrichting</a>
+    </div>
+</div>
+
+<section class="hero">
+    <img src="images/index_images/Frontpage.jpeg" alt="DLS INVIGO" class="hero-image">
+</section>
+
+<section class="news-highlight" style="padding: 40px 0; background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Laatste Nieuws</h2>
+        <div class="facebook-posts-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto;">
+            <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid0uQ9NPujJtPuTrv8X1qf19F5C9jTrQ61NfGfa3c8EjEjPmyKMkFwBfNMXyNqW4vZAl&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+            <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02LVojoGbK87AmLiC6kVpP7QcbqfptJ5vCCwVCHqCvYLcfnBjvgWVb66QwGcPQPZUal&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
         </div>
     </div>
+</section>
 
-    <section class="hero">
-        <img src="images/index_images/Frontpage.jpeg" alt="DLS INVIGO" class="hero-image">
-    </section>
-
-    <section class="news-highlight" style="padding: 40px 0; background: rgba(255, 255, 255, 0.02);">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 40px;">Laatste Nieuws</h2>
-            <div class="facebook-posts-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto;">
-                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid0uQ9NPujJtPuTrv8X1qf19F5C9jTrQ61NfGfa3c8EjEjPmyKMkFwBfNMXyNqW4vZAl&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02LVojoGbK87AmLiC6kVpP7QcbqfptJ5vCCwVCHqCvYLcfnBjvgWVb66QwGcPQPZUal&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="new-riders-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Ons Tenue</h2>
-            
-            <div style="max-width: 600px; margin: 0 auto;">
-                <div class="kit-container">
-                    <div class="kit-slideshow">
-                        <button class="slideshow-arrow arrow-prev" onclick="changeSlide(-1)">&#8249;</button>
-                        <button class="slideshow-arrow arrow-next" onclick="changeSlide(1)">&#8250;</button>
-                        
-                        <div class="kit-slide active" onclick="openKitModal('images/index_images/kit_trui_voorkant.png')">
-                            <img src="images/index_images/kit_trui_voorkant.png" alt="DLS INVIGO Trui Voorkant">
-                        </div>
-                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_trui_linkerkant.png')">
-                            <img src="images/index_images/kit_trui_linkerkant.png" alt="DLS INVIGO Trui Linkerkant">
-                        </div>
-                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_trui_rechterkant.png')">
-                            <img src="images/index_images/kit_trui_rechterkant.png" alt="DLS INVIGO Trui Rechterkant">
-                        </div>
-                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_voorkant.png')">
-                            <img src="images/index_images/kit_broek_voorkant.png" alt="DLS INVIGO Broek Voorkant">
-                        </div>
-                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_achterkant.png')">
-                            <img src="images/index_images/kit_broek_achterkant.png" alt="DLS INVIGO Broek Achterkant">
-                        </div>
-                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_linkerkant.png')">
-                            <img src="images/index_images/kit_broek_linkerkant.png" alt="DLS INVIGO Broek Linkerkant">
-                        </div>
-                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_rechterkant.png')">
-                            <img src="images/index_images/kit_broek_rechterkant.png" alt="DLS INVIGO Broek Rechterkant">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" style="background: rgba(255, 255, 255, 0.02);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Over <span>DLS INVIGO</span></h2>
-                <p>Een gepassioneerde wielerclub met respect voor de sport en elkaar</p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Onze Missie</h3>
-                    <p>DLS INVIGO staat voor passie, teamwork en sportiviteit. Wij brengen wielrenners samen en creëren een omgeving waar iedereen welkom is, ongeacht niveau.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Trainingen</h3>
-                    <p>Onze club organiseert regelmatig groepstrainingen voor verschillende niveaus. Van recreatief tot competitief, er is voor ieder wat wils.</p>
-                </div>
-
-                <div class="card">
-                    <h3>Evenementen</h3>
-                    <p>We nemen deel aan diverse wedstrijden en organiseren jaarlijks meerdere clubevenementen. Samen rijden, samen genieten.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="news-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px;">Laatste Nieuws</h2>
-            <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;">Blijf op de hoogte van onze laatste activiteiten en prestaties</p>
-
-            <div class="news-grid">
-                <div class="news-item">
-                    <div class="news-image">
-                        <img src="images/index_images/news1.jpg" alt="Nieuws 1">
-                    </div>
-                    <div class="news-content">
-                        <p class="news-date">Datum te bepalen</p>
-                        <h3>Nieuwsartikel Titel 1</h3>
-                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-image">
-                        <img src="images/index_images/news2.jpg" alt="Nieuws 2">
-                    </div>
-                    <div class="news-content">
-                        <p class="news-date">Datum te bepalen</p>
-                        <h3>Nieuwsartikel Titel 2</h3>
-                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-image">
-                        <img src="images/index_images/news3.jpg" alt="Nieuws 3">
-                    </div>
-                    <div class="news-content">
-                        <p class="news-date">Datum te bepalen</p>
-                        <h3>Nieuwsartikel Titel 3</h3>
-                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Word <span>Lid</span></h2>
-                <p>Sluit je aan bij DLS INVIGO en maak deel uit van onze wielerfamilie</p>
-            </div>
-
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p style="color: var(--text-gray); font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-                    Of je nu een ervaren wielrenner bent of net begint, bij DLS INVIGO ben je welkom. 
-                    Onze club biedt een gezellige en sportieve omgeving waar iedereen zijn of haar 
-                    wielerdoelen kan nastreven.
-                </p>
-                <a href="lidmaatschap.html" class="cta-button">Bekijk Lidmaatschap</a>
-            </div>
-        </div>
-    </section>
-
-    <div id="kitModal" class="modal" onclick="event.target === this && closeKitModal()">
-        <span class="close-modal" onclick="closeKitModal()">&times;</span>
-        <button class="modal-arrow modal-arrow-prev" onclick="changeModalSlide(-1); event.stopPropagation();">&#8249;</button>
-        <button class="modal-arrow modal-arrow-next" onclick="changeModalSlide(1); event.stopPropagation();">&#8250;</button>
-        <div class="modal-content">
-            <img id="kitModalImage" src="" alt="Kit">
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DLS INVIGO</h3>
-                    <ul>
-                        <li><a href="dls-invigo.html">Over Ons</a></li>
-                        <li><a href="lidmaatschap.html">Lid Worden</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Informatie</h3>
-                    <ul>
-                        <li><a href="feeds.html">Feeds</a></li>
-                        <li><a href="archief.html">Archief</a></li>
-                        <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Club Waarden</h3>
-                    <ul>
-                        <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
-                        <li><a href="gedragscode.html">Gedragscode</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Privacy</h3>
-                    <ul>
-                        <li><a href="gdpr.html">GDPR</a></li>
-                        <li><a href="sponsors.html">Sponsors</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script>
-        // Kit images array
-        const kitImages = [
-            'images/index_images/kit_trui_voorkant.png',
-            'images/index_images/kit_trui_linkerkant.png',
-            'images/index_images/kit_trui_rechterkant.png',
-            'images/index_images/kit_broek_voorkant.png',
-            'images/index_images/kit_broek_achterkant.png',
-            'images/index_images/kit_broek_linkerkant.png',
-            'images/index_images/kit_broek_rechterkant.png'
-        ];
-
-        // Kit slideshow
-        let currentSlide = 0;
-        let currentModalSlide = 0;
-        const slides = document.querySelectorAll('.kit-slide');
-        let autoplayInterval;
+<section class="new-riders-section">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 50px;">Ons Tenue</h2>
         
-        function showSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (n + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
+        <div style="max-width: 600px; margin: 0 auto;">
+            <div class="kit-container">
+                <div class="kit-slideshow">
+                    <button class="slideshow-arrow arrow-prev" onclick="changeSlide(-1)">&#8249;</button>
+                    <button class="slideshow-arrow arrow-next" onclick="changeSlide(1)">&#8250;</button>
+                    
+                    <div class="kit-slide active" onclick="openKitModal('images/index_images/kit_trui_voorkant.png')">
+                        <img src="images/index_images/kit_trui_voorkant.png" alt="DLS INVIGO Trui Voorkant">
+                    </div>
+                    <div class="kit-slide" onclick="openKitModal('images/index_images/kit_trui_linkerkant.png')">
+                        <img src="images/index_images/kit_trui_linkerkant.png" alt="DLS INVIGO Trui Linkerkant">
+                    </div>
+                    <div class="kit-slide" onclick="openKitModal('images/index_images/kit_trui_rechterkant.png')">
+                        <img src="images/index_images/kit_trui_rechterkant.png" alt="DLS INVIGO Trui Rechterkant">
+                    </div>
+                    <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_voorkant.png')">
+                        <img src="images/index_images/kit_broek_voorkant.png" alt="DLS INVIGO Broek Voorkant">
+                    </div>
+                    <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_achterkant.png')">
+                        <img src="images/index_images/kit_broek_achterkant.png" alt="DLS INVIGO Broek Achterkant">
+                    </div>
+                    <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_linkerkant.png')">
+                        <img src="images/index_images/kit_broek_linkerkant.png" alt="DLS INVIGO Broek Linkerkant">
+                    </div>
+                    <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_rechterkant.png')">
+                        <img src="images/index_images/kit_broek_rechterkant.png" alt="DLS INVIGO Broek Rechterkant">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-            resetAutoplay();
-        }
+<section class="section" style="background: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Over <span>DLS INVIGO</span></h2>
+            <p>Een gepassioneerde wielerclub met respect voor de sport en elkaar</p>
+        </div>
 
-        function autoplaySlides() {
-            autoplayInterval = setInterval(() => {
-                showSlide(currentSlide + 1);
-            }, 4000);
-        }
+        <div class="grid-3">
+            <div class="card">
+                <h3>Onze Missie</h3>
+                <p>DLS INVIGO staat voor passie, teamwork en sportiviteit. Wij brengen wielrenners samen en creëren een omgeving waar iedereen welkom is, ongeacht niveau.</p>
+            </div>
 
-        function resetAutoplay() {
-            clearInterval(autoplayInterval);
-            autoplaySlides();
-        }
+            <div class="card">
+                <h3>Trainingen</h3>
+                <p>Onze club organiseert regelmatig groepstrainingen voor verschillende niveaus. Van recreatief tot competitief, er is voor ieder wat wils.</p>
+            </div>
 
-        // Kit modal functions
-        function openKitModal(imageSrc) {
-            // Find the index of the current image
-            currentModalSlide = kitImages.indexOf(imageSrc);
-            if (currentModalSlide === -1) currentModalSlide = 0;
-            
-            document.getElementById('kitModalImage').src = imageSrc;
-            document.getElementById('kitModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+            <div class="card">
+                <h3>Evenementen</h3>
+                <p>We nemen deel aan diverse wedstrijden en organiseren jaarlijks meerdere clubevenementen. Samen rijden, samen genieten.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        function changeModalSlide(direction) {
-            currentModalSlide = (currentModalSlide + direction + kitImages.length) % kitImages.length;
-            document.getElementById('kitModalImage').src = kitImages[currentModalSlide];
-        }
+<section class="news-section">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Laatste Nieuws</h2>
+        <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;">Blijf op de hoogte van onze laatste activiteiten en prestaties</p>
 
-        function closeKitModal() {
-            document.getElementById('kitModal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+        <div class="news-grid">
+            <div class="news-item">
+                <div class="news-image">
+                    <img src="images/index_images/news1.jpg" alt="Nieuws 1">
+                </div>
+                <div class="news-content">
+                    <p class="news-date">Datum te bepalen</p>
+                    <h3>Nieuwsartikel Titel 1</h3>
+                    <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
+                </div>
+            </div>
 
-        // Close modal on ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeKitModal();
-            } else if (document.getElementById('kitModal').classList.contains('active')) {
-                if (e.key === 'ArrowLeft') {
-                    changeModalSlide(-1);
-                } else if (e.key === 'ArrowRight') {
-                    changeModalSlide(1);
-                }
-            }
-        });
+            <div class="news-item">
+                <div class="news-image">
+                    <img src="images/index_images/news2.jpg" alt="Nieuws 2">
+                </div>
+                <div class="news-content">
+                    <p class="news-date">Datum te bepalen</p>
+                    <h3>Nieuwsartikel Titel 2</h3>
+                    <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
+                </div>
+            </div>
 
-        // Start autoplay
+            <div class="news-item">
+                <div class="news-image">
+                    <img src="images/index_images/news3.jpg" alt="Nieuws 3">
+                </div>
+                <div class="news-content">
+                    <p class="news-date">Datum te bepalen</p>
+                    <h3>Nieuwsartikel Titel 3</h3>
+                    <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Word <span>Lid</span></h2>
+            <p>Sluit je aan bij DLS INVIGO en maak deel uit van onze wielerfamilie</p>
+        </div>
+
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="color: var(--text-gray); font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                Of je nu een ervaren wielrenner bent of net begint, bij DLS INVIGO ben je welkom. 
+                Onze club biedt een gezellige en sportieve omgeving waar iedereen zijn of haar 
+                wielerdoelen kan nastreven.
+            </p>
+            <a href="lidmaatschap.html" class="cta-button">Bekijk Lidmaatschap</a>
+        </div>
+    </div>
+</section>
+
+<div id="kitModal" class="modal" onclick="event.target === this && closeKitModal()">
+    <span class="close-modal" onclick="closeKitModal()">&times;</span>
+    <button class="modal-arrow modal-arrow-prev" onclick="changeModalSlide(-1); event.stopPropagation();">&#8249;</button>
+    <button class="modal-arrow modal-arrow-next" onclick="changeModalSlide(1); event.stopPropagation();">&#8250;</button>
+    <div class="modal-content">
+        <img id="kitModalImage" src="" alt="Kit">
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DLS INVIGO</h3>
+                <ul>
+                    <li><a href="dls-invigo.html">Over Ons</a></li>
+                    <li><a href="lidmaatschap.html">Lid Worden</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Informatie</h3>
+                <ul>
+                    <li><a href="feeds.html">Feeds</a></li>
+                    <li><a href="archief.html">Archief</a></li>
+                    <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Club Waarden</h3>
+                <ul>
+                    <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
+                    <li><a href="gedragscode.html">Gedragscode</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Privacy</h3>
+                <ul>
+                    <li><a href="gdpr.html">GDPR</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+    // Kit images array
+    const kitImages = [
+        'images/index_images/kit_trui_voorkant.png',
+        'images/index_images/kit_trui_linkerkant.png',
+        'images/index_images/kit_trui_rechterkant.png',
+        'images/index_images/kit_broek_voorkant.png',
+        'images/index_images/kit_broek_achterkant.png',
+        'images/index_images/kit_broek_linkerkant.png',
+        'images/index_images/kit_broek_rechterkant.png'
+    ];
+
+    // Kit slideshow
+    let currentSlide = 0;
+    let currentModalSlide = 0;
+    const slides = document.querySelectorAll('.kit-slide');
+    let autoplayInterval;
+    
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlide + direction);
+        resetAutoplay();
+    }
+
+    function autoplaySlides() {
+        autoplayInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 4000);
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoplayInterval);
         autoplaySlides();
-    </script>
+    }
+
+    // Kit modal functions
+    function openKitModal(imageSrc) {
+        // Find the index of the current image
+        currentModalSlide = kitImages.indexOf(imageSrc);
+        if (currentModalSlide === -1) currentModalSlide = 0;
+        
+        document.getElementById('kitModalImage').src = imageSrc;
+        document.getElementById('kitModal').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function changeModalSlide(direction) {
+        currentModalSlide = (currentModalSlide + direction + kitImages.length) % kitImages.length;
+        document.getElementById('kitModalImage').src = kitImages[currentModalSlide];
+    }
+
+    function closeKitModal() {
+        document.getElementById('kitModal').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeKitModal();
+        } else if (document.getElementById('kitModal').classList.contains('active')) {
+            if (e.key === 'ArrowLeft') {
+                changeModalSlide(-1);
+            } else if (e.key === 'ArrowRight') {
+                changeModalSlide(1);
+            }
+        }
+    });
+
+    // Start autoplay
+    autoplaySlides();
+</script>
+```
+
 </body>
 </html>
