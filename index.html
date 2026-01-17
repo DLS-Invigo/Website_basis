@@ -47,6 +47,15 @@
                 padding: 30px 0;
                 margin-top: 0;
             }
+            
+            .news-highlight {
+                padding: 20px 0 !important;
+            }
+            
+            .news-highlight iframe {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
         }
 
         .riders-grid {
@@ -354,18 +363,21 @@
         <img src="images/index_images/Frontpage.jpeg" alt="DLS INVIGO" class="hero-image">
     </section>
 
+    <section class="news-highlight" style="padding: 40px 0; background: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Laatste Nieuws</h2>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </div>
+    </section>
+
     <section class="new-riders-section">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: 50px;">Voor Nieuwe Rijders</h2>
+            <h2 style="text-align: center; margin-bottom: 50px;">Ons Tenue</h2>
             
-            <div class="riders-grid">
-                <div class="bike-container">
-                    <h3>Onze Fiets</h3>
-                    <img src="images/index_images/bike.jpg" alt="DLS INVIGO Fiets">
-                </div>
-
+            <div style="max-width: 600px; margin: 0 auto;">
                 <div class="kit-container">
-                    <h3>Ons Tenue</h3>
                     <div class="kit-slideshow">
                         <button class="slideshow-arrow arrow-prev" onclick="changeSlide(-1)">&#8249;</button>
                         <button class="slideshow-arrow arrow-next" onclick="changeSlide(1)">&#8250;</button>
