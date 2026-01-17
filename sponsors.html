@@ -14,8 +14,8 @@
         }
 
         .sponsor-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(240, 132, 31, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border: 3px solid rgba(240, 132, 31, 0.5);
             padding: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -23,11 +23,14 @@
             align-items: center;
             justify-content: center;
             min-height: 150px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .sponsor-item:hover {
             border-color: var(--primary-orange);
-            transform: scale(1.02);
+            border-width: 4px;
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(240, 132, 31, 0.3);
         }
 
         .sponsor-item img {
