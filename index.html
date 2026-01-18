@@ -59,12 +59,16 @@
             
             .facebook-post-container {
                 height: auto !important;
+                min-height: auto !important;
                 padding: 15px !important;
+                overflow: visible !important;
             }
             
-            .facebook-post-item iframe {
+            .facebook-post-container iframe {
                 width: 100% !important;
                 max-width: 100% !important;
+                height: auto !important;
+                min-height: 600px !important;
             }
         }
 
@@ -266,10 +270,6 @@
             .news-item h3 {
                 font-size: 18px;
             }
-            
-            .facebook-post-container {
-                height: auto !important;
-            }
         }
 
         .news-grid {
@@ -375,6 +375,10 @@
             <button class="close-menu">&times;</button>
         </div>
         <div class="dropdown-links">
+            <a href="index.html">Home</a>
+            <a href="lidmaatschap.html">Lidmaatschap</a>
+            <a href="dls-invigo.html">DLS INVIGO</a>
+            <a href="sponsors.html">Sponsors</a>
             <a href="feeds.html">Feeds</a>
             <a href="respect.html">R.E.S.P.E.C.T.</a>
             <a href="gdpr.html">GDPR</a>
@@ -393,14 +397,14 @@
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 40px;">Laatste Nieuws</h2>
             <div class="facebook-posts-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto;">
-                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center;">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid0uQ9NPujJtPuTrv8X1qf19F5C9jTrQ61NfGfa3c8EjEjPmyKMkFwBfNMXyNqW4vZAl&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center;">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid0uQ9NPujJtPuTrv8X1qf19F5C9jTrQ61NfGfa3c8EjEjPmyKMkFwBfNMXyNqW4vZAl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; height: 650px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02LVojoGbK87AmLiC6kVpP7QcbqfptJ5vCCwVCHqCvYLcfnBjvgWVb66QwGcPQPZUal&show_text=true&width=500" width="500" height="589" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <div class="facebook-post-container" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%); border: 3px solid rgba(240, 132, 31, 0.5); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center;">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02LVojoGbK87AmLiC6kVpP7QcbqfptJ5vCCwVCHqCvYLcfnBjvgWVb66QwGcPQPZUal&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </div>
