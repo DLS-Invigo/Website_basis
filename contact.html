@@ -26,20 +26,21 @@
         .form-group textarea {
             width: 100%;
             padding: 12px 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(240, 132, 31, 0.3);
+            background: rgba(25, 25, 25, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             color: var(--text-white);
             font-size: 16px;
             font-weight: 300;
             font-family: inherit;
             transition: all 0.3s ease;
+            border-radius: 8px;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary-orange);
-            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--text-white);
+            background: rgba(25, 25, 25, 0.9);
         }
 
         .form-group textarea {
@@ -59,7 +60,7 @@
         }
 
         .submit-button {
-            background: var(--primary-orange);
+            background: var(--primary-dark);
             color: var(--text-white);
             padding: 15px 40px;
             font-size: 16px;
@@ -70,19 +71,21 @@
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
+            border-radius: 8px;
         }
 
         .submit-button:hover {
-            background: #d97419;
+            background: #0a0a0a;
             transform: translateY(-2px);
         }
 
         .captcha-container {
             margin: 25px 0;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(240, 132, 31, 0.2);
+            background: rgba(25, 25, 25, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -116,6 +119,10 @@
             <button class="close-menu">&times;</button>
         </div>
         <div class="dropdown-links">
+            <a href="index.html">Home</a>
+            <a href="lidmaatschap.html">Lidmaatschap</a>
+            <a href="dls-invigo.html">DLS INVIGO</a>
+            <a href="sponsors.html">Sponsors</a>
             <a href="feeds.html">Feeds</a>
             <a href="respect.html">R.E.S.P.E.C.T.</a>
             <a href="gdpr.html">GDPR</a>
@@ -137,8 +144,8 @@
                 Heb je vragen over onze club, het lidmaatschap, waar we voor staan, wat we wel of niet aanbieden, hoe je kan sponsoren, waar je ons kan vinden... aarzel niet en stuur ons een mailtje en wij trachten u zo snel mogelijk een passend antwoord te verzenden.
             </p>
 
-            <div class="card" style="margin: 30px 0; padding: 30px; background: rgba(240, 132, 31, 0.1); border-color: var(--primary-orange);">
-                <p><strong>E-mail:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97e4f2f4e5f2e3f6e5fef6f6e3d7f3fbe4fef9e1fef0f8b9f5f2">[email&#160;protected]</a></p>
+            <div class="card" style="margin: 30px 0; padding: 30px;">
+                <p><strong>E-mail:</strong> secretariaat@dlsinvigo.be</p>
                 <p><strong>Adres:</strong> DLS INVIGO, Mechelen</p>
             </div>
 
@@ -170,7 +177,7 @@
 
                 <div class="captcha-container">
                     <p style="margin-bottom: 10px;">Anti-robotverificatie</p>
-                    <p style="color: var(--primary-orange); font-size: 14px;">Klik om te starten - Friendly Captcha</p>
+                    <p style="color: var(--text-white); font-size: 14px;">Klik om te starten - Friendly Captcha</p>
                 </div>
 
                 <button type="submit" class="submit-button">Verzenden</button>
@@ -180,6 +187,30 @@
 
     <footer>
         <div class="container">
+            <div class="footer-sponsors">
+                <h3>Onze Sponsors</h3>
+                <div class="footer-sponsors-grid">
+                    <span class="footer-sponsor-name">Indigo</span>
+                    <span class="footer-sponsor-name">UL3</span>
+                    <span class="footer-sponsor-name">ODTH</span>
+                    <span class="footer-sponsor-name">Fietsen Lauwers Zemst</span>
+                    <span class="footer-sponsor-name">Gamified</span>
+                    <span class="footer-sponsor-name">Condaco</span>
+                    <span class="footer-sponsor-name">Vranken</span>
+                    <span class="footer-sponsor-name">Kachels Cloetens</span>
+                    <span class="footer-sponsor-name">Alltech</span>
+                    <span class="footer-sponsor-name">Thofke Van Lachene</span>
+                    <span class="footer-sponsor-name">Con</span>
+                    <span class="footer-sponsor-name">Sitoke</span>
+                    <span class="footer-sponsor-name">Iciti</span>
+                    <span class="footer-sponsor-name">3Action</span>
+                    <span class="footer-sponsor-name">Tuinaanleg</span>
+                    <span class="footer-sponsor-name">Vermarc</span>
+                    <span class="footer-sponsor-name">De Peppers</span>
+                    <span class="footer-sponsor-name">VDK Bank</span>
+                </div>
+            </div>
+
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>DLS INVIGO</h3>
@@ -188,6 +219,33 @@
                         <li><a href="lidmaatschap.html">Lid Worden</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Informatie</h3>
+                    <ul>
+                        <li><a href="feeds.html">Feeds</a></li>
+                        <li><a href="archief.html">Archief</a></li>
+                        <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Club Waarden</h3>
+                    <ul>
+                        <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
+                        <li><a href="gedragscode.html">Gedragscode</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Privacy</h3>
+                    <ul>
+                        <li><a href="gdpr.html">GDPR</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="footer-bottom">
                 <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
@@ -198,4 +256,3 @@
     <script src="js/script.js"></script>
 </body>
 </html>
-            
