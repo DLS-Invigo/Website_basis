@@ -1,675 +1,590 @@
-:root {
-    --primary-dark: #191919;
-    --primary-orange: #f0841f;
-    --text-white: #ffffff;
-    --text-gray: #cccccc;
-    --transition-speed: 0.3s;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 300;
-    background-color: var(--primary-orange);
-    color: var(--text-white);
-    line-height: 1.6;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
-}
-
-p, li, a, span, div {
-    font-weight: 300;
-}
-
-a {
-    color: var(--text-white);
-    text-decoration: none;
-    transition: color var(--transition-speed) ease;
-}
-
-a:hover {
-    color: var(--primary-orange);
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header & Navigation */
-header {
-    background: linear-gradient(180deg, rgba(25, 25, 25, 0.98) 0%, rgba(25, 25, 25, 0.95) 100%);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(240, 132, 31, 0.2);
-    backdrop-filter: blur(10px);
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--text-white);
-    transition: opacity var(--transition-speed) ease;
-}
-
-.logo:hover {
-    opacity: 0.8;
-}
-
-.logo-img {
-    height: 50px;
-    width: auto;
-}
-
-.logo span {
-    color: var(--primary-orange);
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav-main {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-main a {
-    font-size: 15px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    position: relative;
-    padding: 8px 0;
-    color: var(--primary-orange);
-}
-
-.nav-main a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-orange);
-    transition: width var(--transition-speed) ease;
-}
-
-.nav-main a:hover::after {
-    width: 100%;
-}
-
-/* Hamburger Menu Button */
-.menu-toggle {
-    background: transparent;
-    border: none;
-    color: var(--text-white);
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    transition: opacity var(--transition-speed) ease;
-}
-
-.menu-toggle:hover {
-    opacity: 0.7;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: var(--primary-orange);
-    transition: all var(--transition-speed) ease;
-}
-
-.menu-toggle:hover span {
-    background-color: var(--primary-orange);
-}
-
-.dropdown-menu {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 350px;
-    height: 100vh;
-    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.7);
-    transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 1001;
-    overflow-y: auto;
-}
-
-.dropdown-menu.active {
-    right: 0;
-}
-
-.dropdown-header {
-    padding: 25px;
-    border-bottom: 2px solid var(--primary-orange);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.dropdown-header h3 {
-    font-size: 18px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.close-menu {
-    background: none;
-    border: none;
-    color: var(--text-white);
-    font-size: 28px;
-    cursor: pointer;
-    transition: all var(--transition-speed) ease;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-}
-
-.close-menu:hover {
-    background: rgba(240, 132, 31, 0.2);
-    color: var(--primary-orange);
-    transform: rotate(90deg);
-}
-
-.dropdown-links {
-    padding: 30px 25px;
-}
-
-.dropdown-links a {
-    display: block;
-    padding: 15px 20px;
-    margin-bottom: 8px;
-    background: rgba(255, 255, 255, 0.03);
-    border-left: 3px solid transparent;
-    font-size: 15px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: all var(--transition-speed) ease;
-    color: var(--primary-orange);
-}
-
-.dropdown-links a:hover {
-    background: rgba(240, 132, 31, 0.1);
-    border-left-color: var(--primary-orange);
-    padding-left: 30px;
-}
-
-/* Mobile Menu Toggle */
-.mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--text-white);
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    margin-top: 70px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 0;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-/* Content Sections */
-.section {
-    padding: 80px 0;
-    position: relative;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.section-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: var(--primary-orange);
-}
-
-.section-header h2 {
-    font-size: 56px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.section-header h2 span {
-    color: var(--primary-orange);
-}
-
-.section-header p {
-    font-size: 18px;
-    color: var(--text-gray);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* Grid Layouts */
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-/* Cards */
-.card {
-    background: var(--primary-dark);
-    border: none;
-    padding: 30px;
-    transition: all var(--transition-speed) ease;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-}
-
-.card h3 {
-    font-size: 24px;
-    font-weight: 300;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--primary-orange);
-}
-
-.card p {
-    color: var(--text-gray);
-    line-height: 1.8;
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
-    background: var(--primary-dark);
-    color: var(--text-white);
-    padding: 15px 40px;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    transition: all var(--transition-speed) ease;
-    border-radius: 20px;
-}
-
-.cta-button:hover {
-    background: #0a0a0a;
-    transform: translateY(-2px);
-}
-
-/* Image Containers */
-.image-box {
-    width: 100%;
-    height: 300px;
-    background: var(--primary-dark);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
-    transition: all var(--transition-speed) ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-}
-
-.image-box:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition-speed) ease;
-}
-
-.image-box:hover img {
-    transform: scale(1.05);
-}
-
-.image-placeholder {
-    color: var(--primary-orange);
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 300;
-}
-
-/* Footer */
-footer {
-    background: #0a0a0a;
-    border-top: 2px solid var(--primary-orange);
-    padding: 60px 0 30px;
-    margin-top: 80px;
-}
-
-.footer-sponsors {
-    margin-bottom: 50px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-sponsors h3 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    color: var(--primary-orange);
-}
-
-.footer-sponsors-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
-    align-items: center;
-    justify-items: center;
-}
-
-.footer-sponsor-name {
-    font-size: 13px;
-    font-weight: 300;
-    color: var(--text-gray);
-    text-align: center;
-    transition: color var(--transition-speed) ease;
-}
-
-.footer-sponsor-name:hover {
-    color: var(--primary-orange);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    color: var(--primary-orange);
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 12px;
-}
-
-.footer-section ul li a {
-    color: var(--text-gray);
-    font-size: 14px;
-    transition: all var(--transition-speed) ease;
-}
-
-.footer-section ul li a:hover {
-    color: var(--primary-orange);
-    padding-left: 5px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-gray);
-    font-size: 14px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .nav-main {
-        gap: 20px;
-    }
-    
-    .grid-3, .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .footer-sponsors-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    /* HIDE ALL MAIN NAVIGATION ON MOBILE - ONLY SHOW BURGER MENU */
-    .nav-main {
-        display: none !important;
-    }
-    
-    .menu-toggle {
-        display: flex !important;
-        width: 40px;
-        height: 40px;
-        gap: 5px;
-    }
-    
-    .menu-toggle span {
-        height: 4px;
-    }
-    
-    .mobile-menu-toggle {
-        display: none;
-    }
-    
-    .hero {
-        margin-top: 70px;
-        height: auto;
-        margin-bottom: 0;
-    }
-    
-    .hero-image {
-        height: auto;
-        max-height: none;
-        display: block;
-    }
-    
-    .hero h1 {
-        font-size: 42px;
-    }
-    
-    .hero p {
-        font-size: 16px;
-    }
-    
-    .section {
-        padding: 40px 0;
-    }
-    
-    .section-header {
-        margin-bottom: 30px;
-    }
-    
-    .section-header h2 {
-        font-size: 38px;
-    }
-    
-    .grid-2, .grid-3, .grid-4 {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-sponsors-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-    
-    .dropdown-menu {
-        width: 100%;
-        right: -100%;
-    }
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-/* Page-specific styles */
-.page-hero {
-    margin-top: 70px;
-    height: 400px;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.page-hero h1 {
-    font-size: 56px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    z-index: 1;
-}
-
-.page-hero h1 span {
-    color: var(--primary-orange);
-}
-
-.content-section {
-    padding: 60px 0;
-}
-
-.content-section h2 {
-    font-size: 56px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.content-section h3 {
-    font-size: 24px;
-    font-weight: 300;
-    margin: 30px 0 15px;
-    color: var(--primary-orange);
-}
-
-.content-section p {
-    color: var(--text-gray);
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.content-section ul {
-    color: var(--text-gray);
-    line-height: 1.8;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.content-section ul li {
-    margin-bottom: 10px;
-}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLS INVIGO - Wielerclub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .new-riders-section {
+            background: transparent;
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .new-riders-section {
+                padding: 30px 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .new-riders-section h2,
+            .news-highlight h2,
+            .news-section h2 {
+                font-size: 38px !important;
+            }
+
+            .riders-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .bike-container h3,
+            .kit-container h3 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .bike-container,
+            .kit-container {
+                padding: 20px;
+            }
+            
+            .hero {
+                margin-bottom: 0 !important;
+            }
+            
+            .hero-image {
+                margin-bottom: 0 !important;
+            }
+            
+            .section {
+                padding: 30px 0;
+                margin-top: 0;
+            }
+            
+            .news-highlight {
+                padding: 20px 0 !important;
+            }
+            
+            .facebook-posts-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            .facebook-post-container {
+                height: auto !important;
+                min-height: auto !important;
+                padding: 15px !important;
+                overflow: visible !important;
+            }
+            
+            .facebook-post-container iframe {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                min-height: 600px !important;
+            }
+        }
+
+        .riders-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .bike-container,
+        .kit-container {
+            background: var(--primary-dark);
+            border: none;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+        }
+
+        .bike-container:hover,
+        .kit-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .bike-container h3,
+        .kit-container h3 {
+            font-size: 24px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            color: var(--primary-orange);
+        }
+
+        .bike-container img,
+        .kit-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+        }
+
+        .kit-slideshow {
+            position: relative;
+        }
+
+        .kit-slide {
+            display: none;
+            animation: fadeIn 0.5s;
+            cursor: pointer;
+        }
+
+        .kit-slide.active {
+            display: block;
+        }
+
+        .kit-slide img:hover {
+            opacity: 0.9;
+        }
+
+        .slideshow-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(240, 132, 31, 0.8);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+        }
+
+        .slideshow-arrow:hover {
+            background: var(--primary-orange);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .arrow-prev {
+            left: 10px;
+        }
+
+        .arrow-next {
+            right: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-orange);
+        }
+
+        .modal-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(240, 132, 31, 0.8);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            font-size: 35px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2001;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+        }
+
+        .modal-arrow:hover {
+            background: var(--primary-orange);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .modal-arrow-prev {
+            left: 40px;
+        }
+
+        .modal-arrow-next {
+            right: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .facebook-post-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .riders-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/2025_logo_dls.png" alt="DLS INVIGO Logo" class="logo-img">
+            </a>
+            
+            <nav>
+                <div class="nav-main">
+                    <a href="index.html">Home</a>
+                    <a href="lidmaatschap.html">Lidmaatschap</a>
+                    <a href="dls-invigo.html">DLS INVIGO</a>
+                    <a href="sponsors.html">Sponsors</a>
+                </div>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="mobile-menu-toggle">&#9776;</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dropdown-menu">
+        <div class="dropdown-header">
+            <h3>Menu</h3>
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="dropdown-links">
+            <a href="index.html">Home</a>
+            <a href="lidmaatschap.html">Lidmaatschap</a>
+            <a href="dls-invigo.html">DLS INVIGO</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="feeds.html">Feeds</a>
+            <a href="respect.html">R.E.S.P.E.C.T.</a>
+            <a href="gdpr.html">GDPR</a>
+            <a href="gedragscode.html">Gedragscode</a>
+            <a href="archief.html">Archief</a>
+            <a href="contact.html">Contact</a>
+            <a href="wedstrijdinrichting.html">Wedstrijdinrichting</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <img src="images/index_images/Frontpage.jpeg" alt="DLS INVIGO" class="hero-image">
+    </section>
+
+    <section class="news-highlight" style="padding: 40px 0; background: transparent;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Laatste Nieuws</h2>
+            <div class="facebook-posts-grid" id="facebookPostsGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto;">
+                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; display: flex; flex-direction: column; border-radius: 20px;">
+                    <div style="flex: 1; display: flex; align-items: flex-start; justify-content: center; overflow: visible;">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" style="border:none;overflow:visible;max-width:100%;width:100%;min-height:600px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; display: flex; flex-direction: column; border-radius: 20px;">
+                    <div style="flex: 1; display: flex; align-items: flex-start; justify-content: center; overflow: visible;">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid0uQ9NPujJtPuTrv8X1qf19F5C9jTrQ61NfGfa3c8EjEjPmyKMkFwBfNMXyNqW4vZAl&show_text=true&width=500" width="500" style="border:none;overflow:visible;max-width:100%;width:100%;min-height:600px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; display: flex; flex-direction: column; border-radius: 20px;">
+                    <div style="flex: 1; display: flex; align-items: flex-start; justify-content: center; overflow: visible;">
+                        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02LVojoGbK87AmLiC6kVpP7QcbqfptJ5vCCwVCHqCvYLcfnBjvgWVb66QwGcPQPZUal&show_text=true&width=500" width="500" style="border:none;overflow:visible;max-width:100%;width:100%;min-height:600px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to equalize Facebook post container heights
+        function equalizeFacebookPostHeights() {
+            const containers = document.querySelectorAll('.facebook-post-container');
+            if (window.innerWidth > 768) { // Only on desktop
+                // Reset heights first
+                containers.forEach(container => {
+                    container.style.height = 'auto';
+                });
+                
+                // Wait for iframes to load and get max height
+                setTimeout(() => {
+                    let maxHeight = 0;
+                    containers.forEach(container => {
+                        const height = container.offsetHeight;
+                        if (height > maxHeight) {
+                            maxHeight = height;
+                        }
+                    });
+                    
+                    // Set all containers to max height
+                    containers.forEach(container => {
+                        container.style.height = maxHeight + 'px';
+                    });
+                }, 2000); // Wait 2 seconds for Facebook embeds to load
+            } else {
+                // On mobile, reset to auto height
+                containers.forEach(container => {
+                    container.style.height = 'auto';
+                });
+            }
+        }
+        
+        // Run on page load
+        window.addEventListener('load', equalizeFacebookPostHeights);
+        
+        // Run on resize
+        window.addEventListener('resize', equalizeFacebookPostHeights);
+        
+        // Run after a delay to catch late-loading content
+        setTimeout(equalizeFacebookPostHeights, 3000);
+    </script>
+
+    <section class="new-riders-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px; font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Ons Tenue</h2>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="kit-container">
+                    <div class="kit-slideshow">
+                        <button class="slideshow-arrow arrow-prev" onclick="changeSlide(-1)">&#8249;</button>
+                        <button class="slideshow-arrow arrow-next" onclick="changeSlide(1)">&#8250;</button>
+                        
+                        <div class="kit-slide active" onclick="openKitModal('images/index_images/kit_trui_voorkant.png')">
+                            <img src="images/index_images/kit_trui_voorkant.png" alt="DLS INVIGO Trui Voorkant">
+                        </div>
+                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_trui_linkerkant.png')">
+                            <img src="images/index_images/kit_trui_linkerkant.png" alt="DLS INVIGO Trui Linkerkant">
+                        </div>
+                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_trui_rechterkant.png')">
+                            <img src="images/index_images/kit_trui_rechterkant.png" alt="DLS INVIGO Trui Rechterkant">
+                        </div>
+                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_voorkant.png')">
+                            <img src="images/index_images/kit_broek_voorkant.png" alt="DLS INVIGO Broek Voorkant">
+                        </div>
+                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_achterkant.png')">
+                            <img src="images/index_images/kit_broek_achterkant.png" alt="DLS INVIGO Broek Achterkant">
+                        </div>
+                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_linkerkant.png')">
+                            <img src="images/index_images/kit_broek_linkerkant.png" alt="DLS INVIGO Broek Linkerkant">
+                        </div>
+                        <div class="kit-slide" onclick="openKitModal('images/index_images/kit_broek_rechterkant.png')">
+                            <img src="images/index_images/kit_broek_rechterkant.png" alt="DLS INVIGO Broek Rechterkant">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: transparent;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: var(--text-white);">Over DLS INVIGO</h2>
+                <p>Een gepassioneerde wielerclub met respect voor de sport en elkaar</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Onze Missie</h3>
+                    <p>DLS INVIGO staat voor passie, teamwork en sportiviteit. Wij brengen wielrenners samen en creëren een omgeving waar iedereen welkom is, ongeacht niveau.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Trainingen</h3>
+                    <p>Onze club organiseert regelmatig groepstrainingen voor verschillende niveaus. Van recreatief tot competitief, er is voor ieder wat wils.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Evenementen</h3>
+                    <p>We nemen deel aan diverse wedstrijden en organiseren jaarlijks meerdere clubevenementen. Samen rijden, samen genieten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="card" style="max-width: 900px; margin: 0 auto; padding: 50px; text-align: center;">
+                <h2 style="font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Word <span style="color: var(--primary-orange);">Lid</span></h2>
+                <p style="font-size: 20px; color: var(--text-white); margin-bottom: 30px;">Sluit je aan bij DLS INVIGO en maak deel uit van onze wielerfamilie</p>
+                <p style="color: var(--text-gray); font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                    Of je nu een ervaren wielrenner bent of net begint, bij DLS INVIGO ben je welkom. 
+                    Onze club biedt een gezellige en sportieve omgeving waar iedereen zijn of haar 
+                    wielerdoelen kan nastreven.
+                </p>
+                <a href="lidmaatschap.html" class="cta-button">Bekijk Lidmaatschap</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="kitModal" class="modal" onclick="event.target === this && closeKitModal()">
+        <span class="close-modal" onclick="closeKitModal()">&times;</span>
+        <button class="modal-arrow modal-arrow-prev" onclick="changeModalSlide(-1); event.stopPropagation();">&#8249;</button>
+        <button class="modal-arrow modal-arrow-next" onclick="changeModalSlide(1); event.stopPropagation();">&#8250;</button>
+        <div class="modal-content">
+            <img id="kitModalImage" src="" alt="Kit">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DLS INVIGO</h3>
+                    <ul>
+                        <li><a href="dls-invigo.html">Over Ons</a></li>
+                        <li><a href="lidmaatschap.html">Lid Worden</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Informatie</h3>
+                    <ul>
+                        <li><a href="feeds.html">Feeds</a></li>
+                        <li><a href="archief.html">Archief</a></li>
+                        <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Club Waarden</h3>
+                    <ul>
+                        <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
+                        <li><a href="gedragscode.html">Gedragscode</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Privacy</h3>
+                    <ul>
+                        <li><a href="gdpr.html">GDPR</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Kit images array
+        const kitImages = [
+            'images/index_images/kit_trui_voorkant.png',
+            'images/index_images/kit_trui_linkerkant.png',
+            'images/index_images/kit_trui_rechterkant.png',
+            'images/index_images/kit_broek_voorkant.png',
+            'images/index_images/kit_broek_achterkant.png',
+            'images/index_images/kit_broek_linkerkant.png',
+            'images/index_images/kit_broek_rechterkant.png'
+        ];
+
+        // Kit slideshow
+        let currentSlide = 0;
+        let currentModalSlide = 0;
+        const slides = document.querySelectorAll('.kit-slide');
+        let autoplayInterval;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+            resetAutoplay();
+        }
+
+        function autoplaySlides() {
+            autoplayInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 4000);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            autoplaySlides();
+        }
+
+        // Kit modal functions
+        function openKitModal(imageSrc) {
+            // Find the index of the current image
+            currentModalSlide = kitImages.indexOf(imageSrc);
+            if (currentModalSlide === -1) currentModalSlide = 0;
+            
+            document.getElementById('kitModalImage').src = imageSrc;
+            document.getElementById('kitModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function changeModalSlide(direction) {
+            currentModalSlide = (currentModalSlide + direction + kitImages.length) % kitImages.length;
+            document.getElementById('kitModalImage').src = kitImages[currentModalSlide];
+        }
+
+        function closeKitModal() {
+            document.getElementById('kitModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeKitModal();
+            } else if (document.getElementById('kitModal').classList.contains('active')) {
+                if (e.key === 'ArrowLeft') {
+                    changeModalSlide(-1);
+                } else if (e.key === 'ArrowRight') {
+                    changeModalSlide(1);
+                }
+            }
+        });
+
+        // Start autoplay
+        autoplaySlides();
+    </script>
+</body>
+</html>
