@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
@@ -10,91 +9,97 @@
         .sponsors-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 30px;
             margin-top: 40px;
         }
 
-```
-    .sponsor-item {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(240, 132, 31, 0.2);
-        padding: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 150px;
-    }
-
-    .sponsor-item:hover {
-        border-color: var(--primary-orange);
-        transform: scale(1.02);
-    }
-
-    .sponsor-item img {
-        max-width: 100%;
-        max-height: 120px;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 2000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal.active {
-        display: flex;
-    }
-
-    .modal-content {
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-    .modal-content img {
-        width: 100%;
-        height: auto;
-    }
-
-    .close-modal {
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        color: white;
-        font-size: 40px;
-        font-weight: 300;
-        cursor: pointer;
-    }
-
-    .close-modal:hover {
-        color: var(--primary-orange);
-    }
-
-    @media (max-width: 1024px) {
-        .sponsors-grid {
-            grid-template-columns: repeat(3, 1fr);
+        .sponsor-item {
+            background: var(--primary-dark);
+            border: none;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
-    }
 
-    @media (max-width: 768px) {
-        .sponsors-grid {
-            grid-template-columns: repeat(2, 1fr);
+        .sponsor-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
-    }
-</style>
-```
 
+        .sponsor-item img {
+            max-width: 100%;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-orange);
+        }
+
+        @media (max-width: 1024px) {
+            .sponsors-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sponsors-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .sponsor-item {
+                min-height: 150px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -102,185 +107,210 @@
             <a href="index.html" class="logo">
                 <img src="images/2025_logo_dls.png" alt="DLS INVIGO Logo" class="logo-img">
             </a>
-
-```
-        <nav>
-            <div class="nav-main">
-                <a href="index.html">Home</a>
-                <a href="lidmaatschap.html">Lidmaatschap</a>
-                <a href="dls-invigo.html">DLS INVIGO</a>
-                <a href="sponsors.html">Sponsors</a>
-            </div>
-            <button class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <button class="mobile-menu-toggle">&#9776;</button>
-        </nav>
-    </div>
-</header>
-
-<div class="dropdown-menu">
-    <div class="dropdown-header">
-        <h3>Menu</h3>
-        <button class="close-menu">&times;</button>
-    </div>
-    <div class="dropdown-links">
-        <a href="feeds.html">Feeds</a>
-        <a href="respect.html">R.E.S.P.E.C.T.</a>
-        <a href="gdpr.html">GDPR</a>
-        <a href="gedragscode.html">Gedragscode</a>
-        <a href="archief.html">Archief</a>
-        <a href="contact.html">Contact</a>
-        <a href="wedstrijdinrichting.html">Wedstrijdinrichting</a>
-    </div>
-</div>
-
-<section class="content-section" style="padding-top: 100px;">
-    <div class="container">
-        <h2>Sponsors van DLS INVIGO</h2>
-        <p>DLS INVIGO wordt mogelijk gemaakt door de steun van onze trouwe sponsors. Zonder hen zouden we niet kunnen zijn wie we zijn. We zijn hen enorm dankbaar voor hun bijdrage aan onze wielerclub.</p>
-
-        <div class="sponsors-grid">
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/indigo_sponsor.jpg')">
-                <img src="images/sponsors_images/indigo_sponsor.jpg" alt="Indigo">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/ul3_sponsor.jpg')">
-                <img src="images/sponsors_images/ul3_sponsor.jpg" alt="UL3">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/odth_sponsor.jpg')">
-                <img src="images/sponsors_images/odth_sponsor.jpg" alt="ODTH">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/fietsen_Lauwers_Zemst_sponsor.jpg')">
-                <img src="images/sponsors_images/fietsen_Lauwers_Zemst_sponsor.jpg" alt="Fietsen Lauwers Zemst">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/gamified_sponsor.jpg')">
-                <img src="images/sponsors_images/gamified_sponsor.jpg" alt="Gamified">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/condaco_sponsor.jpg')">
-                <img src="images/sponsors_images/condaco_sponsor.jpg" alt="Condaco">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/vranken_sponsor.jpg')">
-                <img src="images/sponsors_images/vranken_sponsor.jpg" alt="Vranken">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/kachels_cloetens_sponsor.jpg')">
-                <img src="images/sponsors_images/kachels_cloetens_sponsor.jpg" alt="Kachels Cloetens">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/alltech_sponsor.jpg')">
-                <img src="images/sponsors_images/alltech_sponsor.jpg" alt="Alltech">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/thofke_van_lachene_sponsor.jpg')">
-                <img src="images/sponsors_images/thofke_van_lachene_sponsor.jpg" alt="Thofke Van Lachene">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/con_sponsor.jpg')">
-                <img src="images/sponsors_images/con_sponsor.jpg" alt="Con">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/sitoke_sponsor.jpg')">
-                <img src="images/sponsors_images/sitoke_sponsor.jpg" alt="Sitoke">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/iciti_sponsor.jpg')">
-                <img src="images/sponsors_images/iciti_sponsor.jpg" alt="Iciti">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/3action_sponsor.jpg')">
-                <img src="images/sponsors_images/3action_sponsor.jpg" alt="3Action">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/Tuinaanleg_sponsor.jpg')">
-                <img src="images/sponsors_images/Tuinaanleg_sponsor.jpg" alt="Tuinaanleg">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/vermarc_spnsor.jpg')">
-                <img src="images/sponsors_images/vermarc_spnsor.jpg" alt="Vermarc">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/de_peppers_sponsor.jpg')">
-                <img src="images/sponsors_images/de_peppers_sponsor.jpg" alt="De Peppers">
-            </div>
-            <div class="sponsor-item" onclick="openModal('images/sponsors_images/vdk_bank_sponsor.jpg')">
-                <img src="images/sponsors_images/vdk_bank_sponsor.jpg" alt="VDK Bank">
-            </div>
+            
+            <nav>
+                <div class="nav-main">
+                    <a href="index.html">Home</a>
+                    <a href="lidmaatschap.html">Lidmaatschap</a>
+                    <a href="dls-invigo.html">DLS INVIGO</a>
+                    <a href="sponsors.html">Sponsors</a>
+                </div>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="mobile-menu-toggle">&#9776;</button>
+            </nav>
         </div>
+    </header>
 
-        <h3 style="margin-top: 60px;">Word Sponsor</h3>
-        <p>Bent u geïnteresseerd om DLS INVIGO te ondersteunen als sponsor? We zijn altijd op zoek naar bedrijven en organisaties die onze passie voor wielrennen delen en ons willen helpen groeien.</p>
-        <p>Voor meer informatie over sponsormogelijkheden, <a href="contact.html" style="color: var(--primary-orange);">neem contact met ons op</a>.</p>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="contact.html" class="cta-button">Contact voor Sponsoring</a>
+    <div class="dropdown-menu">
+        <div class="dropdown-header">
+            <h3>Menu</h3>
+            <button class="close-menu">&times;</button>
+        </div>
+        <div class="dropdown-links">
+            <a href="index.html">Home</a>
+            <a href="lidmaatschap.html">Lidmaatschap</a>
+            <a href="dls-invigo.html">DLS INVIGO</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="feeds.html">Feeds</a>
+            <a href="respect.html">R.E.S.P.E.C.T.</a>
+            <a href="gdpr.html">GDPR</a>
+            <a href="gedragscode.html">Gedragscode</a>
+            <a href="archief.html">Archief</a>
+            <a href="contact.html">Contact</a>
+            <a href="wedstrijdinrichting.html">Wedstrijdinrichting</a>
         </div>
     </div>
-</section>
 
-<div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content">
-        <img id="modalImage" src="" alt="Sponsor">
-    </div>
-</div>
+    <section class="content-section" style="padding-top: 100px;">
+        <div class="container">
+            <h2>Sponsors van DLS INVIGO</h2>
+            <p>DLS INVIGO wordt mogelijk gemaakt door de steun van onze trouwe sponsors. Zonder hen zouden we niet kunnen zijn wie we zijn. We zijn hen enorm dankbaar voor hun bijdrage aan onze wielerclub.</p>
 
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>DLS INVIGO</h3>
-                <ul>
-                    <li><a href="dls-invigo.html">Over Ons</a></li>
-                    <li><a href="lidmaatschap.html">Lid Worden</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="sponsors-grid">
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/indigo_sponsor.jpg')">
+                    <img src="images/sponsors_images/indigo_sponsor.jpg" alt="Indigo">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/ul3_sponsor.jpg')">
+                    <img src="images/sponsors_images/ul3_sponsor.jpg" alt="UL3">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/odth_sponsor.jpg')">
+                    <img src="images/sponsors_images/odth_sponsor.jpg" alt="ODTH">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/fietsen_Lauwers_Zemst_sponsor.jpg')">
+                    <img src="images/sponsors_images/fietsen_Lauwers_Zemst_sponsor.jpg" alt="Fietsen Lauwers Zemst">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/gamified_sponsor.jpg')">
+                    <img src="images/sponsors_images/gamified_sponsor.jpg" alt="Gamified">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/condaco_sponsor.jpg')">
+                    <img src="images/sponsors_images/condaco_sponsor.jpg" alt="Condaco">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/vranken_sponsor.jpg')">
+                    <img src="images/sponsors_images/vranken_sponsor.jpg" alt="Vranken">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/kachels_cloetens_sponsor.jpg')">
+                    <img src="images/sponsors_images/kachels_cloetens_sponsor.jpg" alt="Kachels Cloetens">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/alltech_sponsor.jpg')">
+                    <img src="images/sponsors_images/alltech_sponsor.jpg" alt="Alltech">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/thofke_van_lachene_sponsor.jpg')">
+                    <img src="images/sponsors_images/thofke_van_lachene_sponsor.jpg" alt="Thofke Van Lachene">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/con_sponsor.jpg')">
+                    <img src="images/sponsors_images/con_sponsor.jpg" alt="Con">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/sitoke_sponsor.jpg')">
+                    <img src="images/sponsors_images/sitoke_sponsor.jpg" alt="Sitoke">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/iciti_sponsor.jpg')">
+                    <img src="images/sponsors_images/iciti_sponsor.jpg" alt="Iciti">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/3action_sponsor.jpg')">
+                    <img src="images/sponsors_images/3action_sponsor.jpg" alt="3Action">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/Tuinaanleg_sponsor.jpg')">
+                    <img src="images/sponsors_images/Tuinaanleg_sponsor.jpg" alt="Tuinaanleg">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/vermarc_spnsor.jpg')">
+                    <img src="images/sponsors_images/vermarc_spnsor.jpg" alt="Vermarc">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/de_peppers_sponsor.jpg')">
+                    <img src="images/sponsors_images/de_peppers_sponsor.jpg" alt="De Peppers">
+                </div>
+                <div class="sponsor-item" onclick="openModal('images/sponsors_images/vdk_bank_sponsor.jpg')">
+                    <img src="images/sponsors_images/vdk_bank_sponsor.jpg" alt="VDK Bank">
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h3>Informatie</h3>
-                <ul>
-                    <li><a href="feeds.html">Feeds</a></li>
-                    <li><a href="archief.html">Archief</a></li>
-                    <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
-                </ul>
-            </div>
+            <h3 style="margin-top: 60px;">Word Sponsor</h3>
+            <p>Bent u geïnteresseerd om DLS INVIGO te ondersteunen als sponsor? We zijn altijd op zoek naar bedrijven en organisaties die onze passie voor wielrennen delen en ons willen helpen groeien.</p>
+            <p>Voor meer informatie over sponsormogelijkheden, <a href="contact.html" style="color: var(--primary-orange);">neem contact met ons op</a>.</p>
 
-            <div class="footer-section">
-                <h3>Club Waarden</h3>
-                <ul>
-                    <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
-                    <li><a href="gedragscode.html">Gedragscode</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Privacy</h3>
-                <ul>
-                    <li><a href="gdpr.html">GDPR</a></li>
-                    <li><a href="sponsors.html">Sponsors</a></li>
-                </ul>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="contact.html" class="cta-button">Contact voor Sponsoring</a>
             </div>
         </div>
+    </section>
 
-        <div class="footer-bottom">
-            <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Sponsor">
         </div>
     </div>
-</footer>
 
-<script src="js/script.js"></script>
-<script>
-    function openModal(imageSrc) {
-        document.getElementById('modalImage').src = imageSrc;
-        document.getElementById('imageModal').classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+    <footer>
+        <div class="container">
+            <div class="footer-sponsors">
+                <h3>Onze Sponsors</h3>
+                <div class="footer-sponsors-grid">
+                    <span class="footer-sponsor-name">Indigo</span>
+                    <span class="footer-sponsor-name">UL3</span>
+                    <span class="footer-sponsor-name">ODTH</span>
+                    <span class="footer-sponsor-name">Fietsen Lauwers Zemst</span>
+                    <span class="footer-sponsor-name">Gamified</span>
+                    <span class="footer-sponsor-name">Condaco</span>
+                    <span class="footer-sponsor-name">Vranken</span>
+                    <span class="footer-sponsor-name">Kachels Cloetens</span>
+                    <span class="footer-sponsor-name">Alltech</span>
+                    <span class="footer-sponsor-name">Thofke Van Lachene</span>
+                    <span class="footer-sponsor-name">Con</span>
+                    <span class="footer-sponsor-name">Sitoke</span>
+                    <span class="footer-sponsor-name">Iciti</span>
+                    <span class="footer-sponsor-name">3Action</span>
+                    <span class="footer-sponsor-name">Tuinaanleg</span>
+                    <span class="footer-sponsor-name">Vermarc</span>
+                    <span class="footer-sponsor-name">De Peppers</span>
+                    <span class="footer-sponsor-name">VDK Bank</span>
+                </div>
+            </div>
 
-    function closeModal() {
-        document.getElementById('imageModal').classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DLS INVIGO</h3>
+                    <ul>
+                        <li><a href="dls-invigo.html">Over Ons</a></li>
+                        <li><a href="lidmaatschap.html">Lid Worden</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
-    // Close modal on ESC key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeModal();
+                <div class="footer-section">
+                    <h3>Informatie</h3>
+                    <ul>
+                        <li><a href="feeds.html">Feeds</a></li>
+                        <li><a href="archief.html">Archief</a></li>
+                        <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Club Waarden</h3>
+                    <ul>
+                        <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
+                        <li><a href="gedragscode.html">Gedragscode</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Privacy</h3>
+                    <ul>
+                        <li><a href="gdpr.html">GDPR</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('imageModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
-    });
-</script>
-```
 
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
