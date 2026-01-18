@@ -487,9 +487,18 @@ footer {
 
 @media (max-width: 768px) {
     /* HIDE MOST MAIN NAVIGATION ON MOBILE - ONLY SHOW SPONSORS */
+    .header-content {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 15px;
+    }
+    
     .nav-main {
         display: flex !important;
         gap: 20px;
+        justify-content: center;
+        order: 0;
     }
     
     .nav-main a {
@@ -499,6 +508,11 @@ footer {
     .nav-main a[href="sponsors.html"] {
         display: block;
         font-size: 13px;
+    }
+    
+    nav {
+        order: 2;
+        gap: 0;
     }
     
     .menu-toggle {
