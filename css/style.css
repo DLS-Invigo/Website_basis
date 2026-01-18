@@ -15,7 +15,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
-    background-color: var(--primary-dark);
+    background-color: var(--primary-orange);
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -328,20 +328,19 @@ nav {
 
 /* Cards */
 .card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
-    border: 2px solid rgba(240, 132, 31, 0.4);
+    background: var(--primary-dark);
+    border: none;
     padding: 30px;
     transition: all var(--transition-speed) ease;
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
 }
 
 .card:hover {
-    border-color: var(--primary-orange);
-    border-width: 3px;
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(240, 132, 31, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .card h3 {
@@ -382,8 +381,8 @@ nav {
 .image-box {
     width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
-    border: 3px solid rgba(240, 132, 31, 0.5);
+    background: var(--primary-dark);
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -392,12 +391,11 @@ nav {
     overflow: hidden;
     transition: all var(--transition-speed) ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
 }
 
 .image-box:hover {
-    border-color: var(--primary-orange);
-    border-width: 4px;
-    box-shadow: 0 8px 25px rgba(240, 132, 31, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .image-box img {
@@ -486,40 +484,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* HIDE MOST MAIN NAVIGATION ON MOBILE - ONLY SHOW SPONSORS */
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        flex: 0 0 auto;
-    }
-    
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 0;
-        flex: 1;
-        justify-content: flex-end;
-    }
-    
+    /* HIDE ALL MAIN NAVIGATION ON MOBILE - ONLY SHOW BURGER MENU */
     .nav-main {
-        display: flex !important;
-        gap: 20px;
-        justify-content: center;
-        flex: 1;
-        margin-right: 20px;
-    }
-    
-    .nav-main a {
-        display: none;
-    }
-    
-    .nav-main a[href="sponsors.html"] {
-        display: block;
-        font-size: 13px;
+        display: none !important;
     }
     
     .menu-toggle {
@@ -527,7 +494,6 @@ footer {
         width: 40px;
         height: 40px;
         gap: 5px;
-        flex: 0 0 auto;
     }
     
     .menu-toggle span {
