@@ -8,130 +8,184 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <a href="index.html" class="logo">
-                <img src="images/2025_logo_dls.png" alt="DLS INVIGO Logo" class="logo-img">
-            </a>
-            
-            <nav>
-                <div class="nav-main">
-                    <a href="index.html">Home</a>
-                    <a href="lidmaatschap.html">Lidmaatschap</a>
-                    <a href="dls-invigo.html">DLS INVIGO</a>
-                    <a href="sponsors.html">Sponsors</a>
-                </div>
-                <button class="menu-toggle">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <img src="images/2025_logo_dls.png" alt="DLS INVIGO Logo">
+                </a>
+                
+                <ul class="nav-links primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="lidmaatschap.html">Lidmaatschap</a></li>
+                    <li><a href="dls-invigo.html">DLS INVIGO</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                </ul>
+                
+                <button class="burger-menu" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <button class="mobile-menu-toggle">&#9776;</button>
-            </nav>
+            </div>
+        </nav>
+        
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <h3>Menu</h3>
+                <button class="close-menu" aria-label="Sluit menu">&times;</button>
+            </div>
+            <ul class="mobile-menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lidmaatschap.html">Lidmaatschap</a></li>
+                <li><a href="dls-invigo.html">DLS INVIGO</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="feeds.html" class="active">Feeds</a></li>
+                <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
+                <li><a href="gdpr.html">GDPR</a></li>
+                <li><a href="gedragscode.html">Gedragscode</a></li>
+                <li><a href="archief.html">Archief</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
+            </ul>
         </div>
     </header>
 
-    <div class="dropdown-menu">
-        <div class="dropdown-header">
-            <h3>Menu</h3>
-            <button class="close-menu">&times;</button>
-        </div>
-        <div class="dropdown-links">
-            <a href="feeds.html">Feeds</a>
-            <a href="respect.html">R.E.S.P.E.C.T.</a>
-            <a href="gdpr.html">GDPR</a>
-            <a href="gedragscode.html">Gedragscode</a>
-            <a href="archief.html">Archief</a>
-            <a href="contact.html">Contact</a>
-            <a href="wedstrijdinrichting.html">Wedstrijdinrichting</a>
-        </div>
-    </div>
-
-    <section style="margin-top: 70px; width: 100%; max-width: 100%; margin-bottom: 40px; overflow: hidden;">
-        <video controls style="width: 100%; height: auto; max-height: 80vh; display: block; object-fit: contain;">
-            <source src="images/feeds_images/ploegvoorstellingvideo.mp4" type="video/mp4">
-            Je browser ondersteunt geen video.
-        </video>
-    </section>
-
-    <section class="content-section">
-        <div class="container">
-            <h2>DLS Invigo Ploegvoorstelling</h2>
-
-            <div class="card" style="margin: 40px 0; padding: 30px; background: rgba(240, 132, 31, 0.1); border-color: var(--primary-orange);">
-                <h3 style="color: var(--primary-orange); margin-bottom: 20px;">Ploegvoorstelling 18 januari 2025</h3>
-                <p style="font-size: 18px; line-height: 1.8;">
-                    Ploegvoorstelling 18 januari 2025 bij sponsor GAMIFIED te Kontich
-                </p>
-            </div>
-
-            <h2 style="margin-top: 60px;">Nieuws & Updates</h2>
-            <p>Blijf op de hoogte van alle activiteiten, resultaten en nieuwtjes van DLS INVIGO.</p>
-
-            <div class="grid-2" style="margin-top: 40px;">
-                <div class="card">
-                    <div class="image-box">
-                        <span class="image-placeholder">Foto</span>
+    <main>
+        <section class="facebook-feed">
+            <h2>Laatste Nieuws van DLS INVIGO</h2>
+            <p class="subtitle">Blijf op de hoogte via onze Facebook pagina</p>
+            
+            <div class="fb-posts-grid">
+                <!-- Facebook Post 1 -->
+                <div class="fb-post-container">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" 
+                         data-width="100%" 
+                         data-show-text="true">
+                        <blockquote cite="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" class="fb-xfbml-parse-ignore">
+                            <p>Loading...</p>
+                            <a href="https://www.facebook.com/DLS.INVIGO">DLS INVIGO</a>
+                        </blockquote>
                     </div>
-                    <h3>Recente Clubrit</h3>
-                    <p style="color: var(--primary-orange); margin-bottom: 10px;">Datum te bepalen</p>
-                    <p>Een prachtige clubrit met een grote groep enthousiaste renners.</p>
                 </div>
 
-                <div class="card">
-                    <div class="image-box">
-                        <span class="image-placeholder">Foto</span>
+                <!-- Facebook Post 2 -->
+                <div class="fb-post-container">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" 
+                         data-width="100%" 
+                         data-show-text="true">
+                        <blockquote cite="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" class="fb-xfbml-parse-ignore">
+                            <p>Loading...</p>
+                            <a href="https://www.facebook.com/DLS.INVIGO">DLS INVIGO</a>
+                        </blockquote>
                     </div>
-                    <h3>Wedstrijd Update</h3>
-                    <p style="color: var(--primary-orange); margin-bottom: 10px;">Datum te bepalen</p>
-                    <p>Onze clubleden hebben uitstekend gepresteerd tijdens de laatste wedstrijd.</p>
+                </div>
+
+                <!-- Facebook Post 3 -->
+                <div class="fb-post-container">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" 
+                         data-width="100%" 
+                         data-show-text="true">
+                        <blockquote cite="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" class="fb-xfbml-parse-ignore">
+                            <p>Loading...</p>
+                            <a href="https://www.facebook.com/DLS.INVIGO">DLS INVIGO</a>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Facebook Post 4 -->
+                <div class="fb-post-container">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" 
+                         data-width="100%" 
+                         data-show-text="true">
+                        <blockquote cite="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" class="fb-xfbml-parse-ignore">
+                            <p>Loading...</p>
+                            <a href="https://www.facebook.com/DLS.INVIGO">DLS INVIGO</a>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Facebook Post 5 -->
+                <div class="fb-post-container">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" 
+                         data-width="100%" 
+                         data-show-text="true">
+                        <blockquote cite="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" class="fb-xfbml-parse-ignore">
+                            <p>Loading...</p>
+                            <a href="https://www.facebook.com/DLS.INVIGO">DLS INVIGO</a>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- Facebook Post 6 -->
+                <div class="fb-post-container">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" 
+                         data-width="100%" 
+                         data-show-text="true">
+                        <blockquote cite="https://www.facebook.com/DLS.INVIGO/posts/XXXXXX" class="fb-xfbml-parse-ignore">
+                            <p>Loading...</p>
+                            <a href="https://www.facebook.com/DLS.INVIGO">DLS INVIGO</a>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://www.facebook.com/DLS.INVIGO" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    Bezoek onze Facebook Pagina
+                </a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DLS INVIGO</h3>
-                    <ul>
-                        <li><a href="dls-invigo.html">Over Ons</a></li>
-                        <li><a href="lidmaatschap.html">Lid Worden</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Informatie</h3>
-                    <ul>
-                        <li><a href="feeds.html">Feeds</a></li>
-                        <li><a href="archief.html">Archief</a></li>
-                        <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Club Waarden</h3>
-                    <ul>
-                        <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
-                        <li><a href="gedragscode.html">Gedragscode</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Privacy</h3>
-                    <ul>
-                        <li><a href="gdpr.html">GDPR</a></li>
-                        <li><a href="sponsors.html">Sponsors</a></li>
-                    </ul>
-                </div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>DLS INVIGO</h3>
+                <ul>
+                    <li><a href="dls-invigo.html">Over Ons</a></li>
+                    <li><a href="lidmaatschap.html">Lid Worden</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
+            <div class="footer-column">
+                <h3>Informatie</h3>
+                <ul>
+                    <li><a href="feeds.html">Feeds</a></li>
+                    <li><a href="archief.html">Archief</a></li>
+                    <li><a href="wedstrijdinrichting.html">Wedstrijdinrichting</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Club Waarden</h3>
+                <ul>
+                    <li><a href="respect.html">R.E.S.P.E.C.T.</a></li>
+                    <li><a href="gedragscode.html">Gedragscode</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Privacy</h3>
+                <ul>
+                    <li><a href="gdpr.html">GDPR</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                </ul>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; Alle rechten voorbehouden DLS INVIGO</p>
+        </div>
     </footer>
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" 
+            src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v19.0" 
+            nonce="RANDOM_NONCE"></script>
 
     <script src="js/script.js"></script>
 </body>
