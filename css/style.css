@@ -486,13 +486,30 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* HIDE ALL MAIN NAVIGATION ON MOBILE - ONLY SHOW BURGER MENU */
+    /* HIDE MOST MAIN NAVIGATION ON MOBILE - ONLY SHOW SPONSORS */
     .nav-main {
-        display: none !important;
+        display: flex !important;
+        gap: 20px;
+    }
+    
+    .nav-main a {
+        display: none;
+    }
+    
+    .nav-main a[href="sponsors.html"] {
+        display: block;
+        font-size: 13px;
     }
     
     .menu-toggle {
         display: flex !important;
+        width: 40px;
+        height: 40px;
+        gap: 5px;
+    }
+    
+    .menu-toggle span {
+        height: 4px;
     }
     
     .mobile-menu-toggle {
