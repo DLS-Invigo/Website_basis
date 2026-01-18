@@ -111,6 +111,7 @@ nav {
     text-transform: uppercase;
     position: relative;
     padding: 8px 0;
+    color: var(--primary-orange);
 }
 
 .nav-main a::after {
@@ -152,7 +153,7 @@ nav {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--text-white);
+    background-color: var(--primary-orange);
     transition: all var(--transition-speed) ease;
 }
 
@@ -228,6 +229,7 @@ nav {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: all var(--transition-speed) ease;
+    color: var(--primary-orange);
 }
 
 .dropdown-links a:hover {
@@ -484,16 +486,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* HIDE ALL MAIN NAVIGATION ON MOBILE - ONLY SHOW BURGER MENU */
     .nav-main {
-        display: none;
+        display: none !important;
     }
     
     .menu-toggle {
-        display: none;
+        display: flex !important;
     }
     
     .mobile-menu-toggle {
-        display: block;
+        display: none;
     }
     
     .hero {
