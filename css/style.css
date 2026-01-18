@@ -425,6 +425,42 @@ footer {
     margin-top: 80px;
 }
 
+.footer-sponsors {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-sponsors h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    color: var(--primary-orange);
+}
+
+.footer-sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer-sponsor-name {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-gray);
+    text-align: center;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-sponsor-name:hover {
+    color: var(--primary-orange);
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -480,6 +516,10 @@ footer {
     
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-sponsors-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -542,6 +582,11 @@ footer {
     
     .footer-content {
         grid-template-columns: 1fr;
+    }
+    
+    .footer-sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
     
     .dropdown-menu {
