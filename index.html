@@ -250,99 +250,15 @@
             to { opacity: 1; }
         }
 
-        .news-section {
-            padding: 60px 0;
-            background: transparent;
-        }
-
         .facebook-post-container:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         @media (max-width: 768px) {
-            .news-section {
-                padding: 30px 0;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .news-item h3 {
-                font-size: 18px;
-            }
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .news-item {
-            background: var(--primary-dark);
-            border: none;
-            padding: 0;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 20px;
-        }
-
-        .news-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .news-image {
-            width: 100%;
-            height: 250px;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border-bottom: none;
-        }
-
-        .news-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .news-content {
-            padding: 25px;
-        }
-
-        .news-date {
-            color: var(--primary-orange);
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .news-item h3 {
-            font-size: 20px;
-            font-weight: 300;
-            margin-bottom: 15px;
-        }
-
-        .news-item p {
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
             .riders-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -398,15 +314,15 @@
     <section class="news-highlight" style="padding: 40px 0; background: transparent;">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 40px; font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Laatste Nieuws</h2>
-            <div class="facebook-posts-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto;">
-                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center; border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02ZA8reUi7AN5rnB2J5KigQLTuXVnQu9zqs8XqZ9UkxKLja9EuxQ33PiVEbHs8fW3Zl&show_text=true&width=500" width="500" height="658" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <div class="facebook-posts-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1600px; margin: 0 auto; align-items: start;">
+                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center; border-radius: 20px; height: 100%;">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02jEJNQ5WPL5urMx32wGHGiLsjiSzKJZGyrZYaqGSUgwbdQs6vPLU9USJPL3YSM2R5l&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center; border-radius: 20px;">
+                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center; border-radius: 20px; height: 100%;">
                     <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid0uQ9NPujJtPuTrv8X1qf19F5C9jTrQ61NfGfa3c8EjEjPmyKMkFwBfNMXyNqW4vZAl&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
-                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center; border-radius: 20px;">
-                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid097R2KRtWPE35a8CKajQNcLungeVgCbH6PAMCKM9BqMjqYruwwK4zeuY2v63tYjTtl&show_text=true&width=500" width="500" height="741" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <div class="facebook-post-container" style="background: #191919; border: none; padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; overflow: visible; display: flex; align-items: flex-start; justify-content: center; border-radius: 20px; height: 100%;">
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FDLSInvigo%2Fposts%2Fpfbid02LVojoGbK87AmLiC6kVpP7QcbqfptJ5vCCwVCHqCvYLcfnBjvgWVb66QwGcPQPZUal&show_text=true&width=500" width="500" height="700" style="border:none;overflow:hidden;max-width:100%;width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
             </div>
         </div>
@@ -475,56 +391,11 @@
         </div>
     </section>
 
-    <section class="news-section">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px; font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Laatste Nieuws</h2>
-            <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;">Blijf op de hoogte van onze laatste activiteiten en prestaties</p>
-
-            <div class="news-grid">
-                <div class="news-item">
-                    <div class="news-image">
-                        <img src="images/index_images/news1.jpg" alt="Nieuws 1">
-                    </div>
-                    <div class="news-content">
-                        <p class="news-date">Datum te bepalen</p>
-                        <h3>Nieuwsartikel Titel 1</h3>
-                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-image">
-                        <img src="images/index_images/news2.jpg" alt="Nieuws 2">
-                    </div>
-                    <div class="news-content">
-                        <p class="news-date">Datum te bepalen</p>
-                        <h3>Nieuwsartikel Titel 2</h3>
-                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-image">
-                        <img src="images/index_images/news3.jpg" alt="Nieuws 3">
-                    </div>
-                    <div class="news-content">
-                        <p class="news-date">Datum te bepalen</p>
-                        <h3>Nieuwsartikel Titel 3</h3>
-                        <p>Beschrijving van het nieuwsartikel komt hier. Dit kan een Facebook post of nieuwsartikel zijn.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Word <span>Lid</span></h2>
-                <p>Sluit je aan bij DLS INVIGO en maak deel uit van onze wielerfamilie</p>
-            </div>
-
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div class="card" style="max-width: 900px; margin: 0 auto; padding: 50px; text-align: center;">
+                <h2 style="font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">Word <span style="color: var(--primary-orange);">Lid</span></h2>
+                <p style="font-size: 20px; color: var(--text-white); margin-bottom: 30px;">Sluit je aan bij DLS INVIGO en maak deel uit van onze wielerfamilie</p>
                 <p style="color: var(--text-gray); font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
                     Of je nu een ervaren wielrenner bent of net begint, bij DLS INVIGO ben je welkom. 
                     Onze club biedt een gezellige en sportieve omgeving waar iedereen zijn of haar 
