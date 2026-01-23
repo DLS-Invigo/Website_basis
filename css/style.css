@@ -153,12 +153,12 @@ nav {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--primary-orange);
+    background-color: #ffffff !important;
     transition: all var(--transition-speed) ease;
 }
 
 .menu-toggle:hover span {
-    background-color: var(--primary-orange);
+    background-color: #ffffff !important;
 }
 
 .dropdown-menu {
@@ -167,7 +167,7 @@ nav {
     right: -400px;
     width: 350px;
     height: 100vh;
-    background: var(--primary-dark);
+    background: #191919 !important;
     box-shadow: -5px 0 30px rgba(0, 0, 0, 0.7);
     transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 1001;
@@ -191,13 +191,13 @@ nav {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--text-white);
+    color: #ffffff !important;
 }
 
 .close-menu {
     background: none;
     border: none;
-    color: var(--text-white);
+    color: #ffffff !important;
     font-size: 28px;
     cursor: pointer;
     transition: all var(--transition-speed) ease;
@@ -211,7 +211,7 @@ nav {
 
 .close-menu:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: var(--text-white);
+    color: #ffffff !important;
     transform: rotate(90deg);
 }
 
@@ -230,13 +230,22 @@ nav {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: all var(--transition-speed) ease;
-    color: var(--text-white);
+    color: #ffffff !important;
+}
+
+.dropdown-menu .dropdown-links a {
+    color: #ffffff !important;
 }
 
 .dropdown-links a:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-left-color: var(--text-white);
+    border-left-color: #ffffff;
     padding-left: 30px;
+    color: #ffffff !important;
+}
+
+.dropdown-menu .dropdown-links a:hover {
+    color: #ffffff !important;
 }
 
 /* Mobile Menu Toggle */
@@ -542,6 +551,7 @@ footer {
     
     .menu-toggle span {
         height: 4px;
+        background-color: #ffffff !important;
     }
     
     .mobile-menu-toggle {
@@ -682,4 +692,38 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* FORCE WHITE MENU COLORS - OVERRIDE EVERYTHING */
+.menu-toggle,
+.menu-toggle span,
+nav .menu-toggle,
+nav .menu-toggle span,
+header .menu-toggle,
+header .menu-toggle span {
+    color: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+.dropdown-menu,
+.dropdown-menu.active {
+    background: #191919 !important;
+    background-color: #191919 !important;
+}
+
+.dropdown-links a,
+.dropdown-menu .dropdown-links a,
+.dropdown-menu a {
+    color: #ffffff !important;
+}
+
+.dropdown-links a:hover,
+.dropdown-menu .dropdown-links a:hover,
+.dropdown-menu a:hover {
+    color: #ffffff !important;
+}
+
+.dropdown-header h3,
+.close-menu {
+    color: #ffffff !important;
 }
