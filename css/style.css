@@ -167,7 +167,7 @@ nav {
     right: -400px;
     width: 350px;
     height: 100vh;
-    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+    background: var(--primary-dark);
     box-shadow: -5px 0 30px rgba(0, 0, 0, 0.7);
     transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 1001;
@@ -180,7 +180,7 @@ nav {
 
 .dropdown-header {
     padding: 25px;
-    border-bottom: 2px solid var(--primary-orange);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -191,6 +191,7 @@ nav {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--text-white);
 }
 
 .close-menu {
@@ -209,8 +210,8 @@ nav {
 }
 
 .close-menu:hover {
-    background: rgba(240, 132, 31, 0.2);
-    color: var(--primary-orange);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
     transform: rotate(90deg);
 }
 
@@ -229,12 +230,12 @@ nav {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: all var(--transition-speed) ease;
-    color: var(--primary-orange);
+    color: var(--text-white);
 }
 
 .dropdown-links a:hover {
-    background: rgba(240, 132, 31, 0.1);
-    border-left-color: var(--primary-orange);
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--text-white);
     padding-left: 30px;
 }
 
@@ -329,7 +330,7 @@ nav {
 /* Cards */
 .card {
     background: var(--primary-dark);
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     padding: 30px;
     transition: all var(--transition-speed) ease;
     position: relative;
@@ -341,6 +342,7 @@ nav {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .card h3 {
@@ -383,7 +385,7 @@ nav {
     width: 100%;
     height: 300px;
     background: var(--primary-dark);
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -397,6 +399,7 @@ nav {
 
 .image-box:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .image-box img {
@@ -672,4 +675,11 @@ footer {
 
 .content-section ul li {
     margin-bottom: 10px;
+}
+
+/* Facebook Post Containers */
+.facebook-post-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.3) !important;
 }
