@@ -15,7 +15,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 300;
-    background-color: var(--primary-orange);
+    background-color: #191919;
     color: var(--text-white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -338,8 +338,8 @@ nav {
 
 /* Cards */
 .card {
-    background: var(--primary-dark);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: #242424;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 30px;
     transition: all var(--transition-speed) ease;
     position: relative;
@@ -351,7 +351,7 @@ nav {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .card h3 {
@@ -393,8 +393,8 @@ nav {
 .image-box {
     width: 100%;
     height: 300px;
-    background: var(--primary-dark);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: #242424;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -408,7 +408,7 @@ nav {
 
 .image-box:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .image-box img {
@@ -703,7 +703,7 @@ footer {
 .facebook-post-container:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 255, 255, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* FORCE WHITE MENU COLORS - OVERRIDE EVERYTHING */
