@@ -518,6 +518,18 @@ footer {
 }
 
 /* Responsive Design */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: flex !important;
+        background: transparent !important;
+    }
+    
+    .menu-toggle span {
+        background-color: #ffffff !important;
+        display: block !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .nav-main {
         gap: 20px;
@@ -695,13 +707,15 @@ footer {
 }
 
 /* FORCE WHITE MENU COLORS - OVERRIDE EVERYTHING */
-.menu-toggle,
-.menu-toggle span,
-nav .menu-toggle,
-nav .menu-toggle span,
-header .menu-toggle,
-header .menu-toggle span {
+.menu-toggle {
     color: #ffffff !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+.menu-toggle span,
+nav .menu-toggle span,
+header .menu-toggle span {
     background-color: #ffffff !important;
 }
 
@@ -725,5 +739,66 @@ header .menu-toggle span {
 
 .dropdown-header h3,
 .close-menu {
+    color: #ffffff !important;
+}
+/* ABSOLUTE MENU COLOR FIX - HIGHEST PRIORITY */
+body .menu-toggle,
+html body .menu-toggle,
+header .menu-toggle {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+body .menu-toggle span,
+html body .menu-toggle span,
+header .menu-toggle span,
+nav .menu-toggle span {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+body .dropdown-menu,
+html body .dropdown-menu,
+body .dropdown-menu.active,
+html body .dropdown-menu.active {
+    background: #191919 !important;
+    background-color: #191919 !important;
+    background-image: none !important;
+}
+
+body .dropdown-links a,
+html body .dropdown-links a,
+body .dropdown-menu a,
+html body .dropdown-menu a {
+    color: #ffffff !important;
+}
+
+/* ULTIMATE FIX - MAXIMUM SPECIFICITY */
+html body header nav button.menu-toggle {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+html body header nav button.menu-toggle span {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+}
+
+html body div.dropdown-menu {
+    background: #191919 !important;
+    background-color: #191919 !important;
+    background-image: none !important;
+}
+
+html body div.dropdown-menu div.dropdown-links a {
+    color: #ffffff !important;
+}
+
+html body div.dropdown-menu div.dropdown-header h3,
+html body div.dropdown-menu button.close-menu {
     color: #ffffff !important;
 }
