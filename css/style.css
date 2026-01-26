@@ -807,18 +807,39 @@ html body div.dropdown-menu button.close-menu {
 .fb-page, .fb-page iframe {
     display: block !important;
     width: 100% !important;
-    max-width: 500px !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
 }
 
 .facebook-post-container .fb-page {
     margin: 0 auto;
 }
 
-/* Remove extra whitespace from Facebook embed */
-.facebook-post-container {
-    line-height: 0;
+.facebook-post-container .fb-page iframe {
+    border: none !important;
 }
 
-.facebook-post-container > div {
-    line-height: normal;
+/* Ensure Facebook content fits properly */
+.facebook-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Remove extra spacing */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .facebook-post-container {
+        padding: 15px !important;
+    }
+    
+    .fb-page {
+        width: 100% !important;
+    }
 }
