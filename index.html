@@ -315,17 +315,26 @@
     <section class="news-highlight" style="padding: 40px 0; background: transparent;">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 40px; font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Laatste Nieuws</h2>
-            <div style="max-width: 500px; margin: 0 auto;">
-                <div class="facebook-post-container" style="background: #242424; border: 2px solid rgba(255, 255, 255, 0.3); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; border-radius: 20px;">
+            
+            <!-- Loading indicator -->
+            <div id="fb-loading" style="max-width: 500px; margin: 0 auto; text-align: center; padding: 40px;">
+                <div style="background: #242424; border: 2px solid rgba(255, 255, 255, 0.3); padding: 40px; border-radius: 20px;">
+                    <p style="color: var(--text-white); font-size: 18px;">Facebook posts worden geladen...</p>
+                </div>
+            </div>
+            
+            <div id="fb-container" style="max-width: 500px; margin: 0 auto; display: none;">
+                <div class="facebook-post-container" style="background: #242424; border: 2px solid rgba(255, 255, 255, 0.3); padding: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; border-radius: 20px; overflow: hidden;">
                     <div class="fb-page" 
                          data-href="https://www.facebook.com/DLSInvigo" 
                          data-tabs="timeline" 
                          data-width="500" 
-                         data-height="800"
+                         data-height="700"
                          data-small-header="false" 
                          data-adapt-container-width="true" 
                          data-hide-cover="false" 
-                         data-show-facepile="false">
+                         data-show-facepile="false"
+                         data-lazy="true">
                         <blockquote cite="https://www.facebook.com/DLSInvigo" class="fb-xfbml-parse-ignore">
                             <a href="https://www.facebook.com/DLSInvigo">DLS Invigo - ex Dijlespurters</a>
                         </blockquote>
@@ -335,9 +344,44 @@
         </div>
     </section>
 
-    <!-- Facebook SDK Script -->
+    <!-- Facebook SDK Script - Optimized Loading -->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0"></script>
+    <script>
+        // Facebook SDK met lazy loading en callback
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+            
+            // Hide loading, show Facebook feed
+            FB.Event.subscribe('xfbml.render', function() {
+                setTimeout(function() {
+                    document.getElementById('fb-loading').style.display = 'none';
+                    document.getElementById('fb-container').style.display = 'block';
+                }, 500);
+            });
+        };
+
+        // Load Facebook SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0";
+            js.async = true;
+            js.defer = true;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        
+        // Fallback: show container after 5 seconds if FB hasn't loaded
+        setTimeout(function() {
+            if (document.getElementById('fb-loading').style.display !== 'none') {
+                document.getElementById('fb-loading').style.display = 'none';
+                document.getElementById('fb-container').style.display = 'block';
+            }
+        }, 5000);
+    </script>
 
     <section class="new-riders-section">
         <div class="container">
