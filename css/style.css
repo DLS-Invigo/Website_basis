@@ -804,10 +804,27 @@ html body div.dropdown-menu button.close-menu {
 }
 
 /* Facebook Plugin Optimizations */
-.fb-page, .fb-page iframe {
-    display: block !important;
+.fb-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.facebook-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.fb-page {
     width: 100% !important;
-    max-width: 540px !important;
+    max-width: 100% !important;
+}
+
+.fb-page iframe {
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 0 auto !important;
 }
 
@@ -815,31 +832,36 @@ html body div.dropdown-menu button.close-menu {
     margin: 0 auto;
 }
 
-.facebook-post-container .fb-page iframe {
-    border: none !important;
-}
-
-/* Ensure Facebook content fits properly */
-.facebook-post-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 /* Remove extra spacing */
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe {
     display: block !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 /* Mobile optimization */
 @media (max-width: 768px) {
+    .fb-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
     .facebook-post-container {
         padding: 15px !important;
+        margin: 0 10px;
     }
     
     .fb-page {
         width: 100% !important;
+    }
+    
+    .news-highlight h2 {
+        font-size: 38px !important;
+        padding: 0 20px;
+    }
+}
+
+/* Tablet optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .fb-wrapper {
+        max-width: 500px;
     }
 }
