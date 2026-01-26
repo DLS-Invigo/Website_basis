@@ -317,18 +317,18 @@
             <h2 style="text-align: center; margin-bottom: 40px; font-size: 56px; font-weight: 300; text-transform: uppercase; letter-spacing: 2px;">Laatste Nieuws</h2>
             
             <!-- Loading indicator -->
-            <div id="fb-loading" style="max-width: 600px; margin: 0 auto; text-align: center; padding: 40px;">
+            <div id="fb-loading" class="fb-wrapper" style="text-align: center; padding: 40px;">
                 <div style="background: #242424; border: 2px solid rgba(255, 255, 255, 0.3); padding: 40px; border-radius: 20px;">
                     <p style="color: var(--text-white); font-size: 18px;">Facebook posts worden geladen...</p>
                 </div>
             </div>
             
-            <div id="fb-container" style="max-width: 600px; margin: 0 auto; display: none;">
-                <div class="facebook-post-container" style="background: #242424; border: 2px solid rgba(255, 255, 255, 0.3); padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; border-radius: 20px; overflow: visible; min-height: 600px;">
+            <div id="fb-container" class="fb-wrapper" style="display: none;">
+                <div class="facebook-post-container" style="background: #242424; border: 2px solid rgba(255, 255, 255, 0.3); padding: 30px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); transition: all 0.3s ease; border-radius: 20px;">
                     <div class="fb-page" 
                          data-href="https://www.facebook.com/DLSInvigo" 
                          data-tabs="timeline" 
-                         data-width="540" 
+                         data-width="" 
                          data-height="800"
                          data-small-header="false" 
                          data-adapt-container-width="true" 
@@ -349,16 +349,32 @@
     
     <div id="fb-root"></div>
     <script>
+        // Set Facebook plugin width based on screen size
+        function setFacebookWidth() {
+            var fbPage = document.querySelector('.fb-page');
+            if (fbPage) {
+                if (window.innerWidth <= 768) {
+                    // Mobile: use container width
+                    fbPage.setAttribute('data-width', Math.min(window.innerWidth - 80, 400));
+                } else {
+                    // Desktop: fixed width
+                    fbPage.setAttribute('data-width', '540');
+                }
+            }
+        }
+        
+        // Set width before loading
+        setFacebookWidth();
+        
         // Preload Facebook SDK as early as possible
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
             js.src = "https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v18.0";
-            js.async = false; // Load immediately, not async
+            js.async = false;
             fjs.parentNode.insertBefore(js, fjs);
             
-            // Initialize as soon as loaded
             js.onload = function() {
                 if (window.FB) {
                     FB.init({
@@ -366,7 +382,6 @@
                         version: 'v18.0'
                     });
                     
-                    // Hide loading, show Facebook feed
                     FB.Event.subscribe('xfbml.render', function() {
                         setTimeout(function() {
                             document.getElementById('fb-loading').style.display = 'none';
@@ -374,13 +389,24 @@
                         }, 300);
                     });
                     
-                    // Trigger parse immediately
                     FB.XFBML.parse();
                 }
             };
         }(document, 'script', 'facebook-jssdk'));
         
-        // Fallback: show container after 3 seconds if FB hasn't loaded
+        // Reparse on window resize (for orientation changes)
+        var resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                setFacebookWidth();
+                if (window.FB) {
+                    FB.XFBML.parse();
+                }
+            }, 500);
+        });
+        
+        // Fallback
         setTimeout(function() {
             if (document.getElementById('fb-loading').style.display !== 'none') {
                 document.getElementById('fb-loading').style.display = 'none';
