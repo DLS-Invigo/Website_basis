@@ -802,3 +802,23 @@ html body div.dropdown-menu div.dropdown-header h3,
 html body div.dropdown-menu button.close-menu {
     color: #ffffff !important;
 }
+
+/* Facebook Plugin Optimizations */
+.fb-page, .fb-page iframe {
+    display: block !important;
+    width: 100% !important;
+    max-width: 500px !important;
+}
+
+.facebook-post-container .fb-page {
+    margin: 0 auto;
+}
+
+/* Remove extra whitespace from Facebook embed */
+.facebook-post-container {
+    line-height: 0;
+}
+
+.facebook-post-container > div {
+    line-height: normal;
+}
